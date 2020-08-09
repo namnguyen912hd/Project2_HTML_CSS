@@ -1,0 +1,270 @@
+@import 'content.css';
+*{
+	box-sizing: border-box;
+}
+html,body{
+	font-family:Arial, "Helvetica Neue",Helvetica;
+	margin: 0;
+}
+/*------------------------------------------------------header*/
+header{
+	width: 100%;
+	height: 101px;
+	float: left;
+	background:  #FF402B;  
+}
+.header_left{
+	float: left;
+}
+#logo{
+	padding-left: 2%;
+	width: 25%;
+	height: 100px;
+}
+#logo img{
+	width: 100%;
+	height: 100%;
+}
+#form_search{
+	padding-top: 50px; 
+	padding-left: 11%;
+	width: 43%;
+	height: 100px;
+	 }
+#form_search form{
+	width: 100%;
+	height: auto;
+}
+header #form_search input{
+ 	border: 1px solid #f9c9bb;
+ 	width: 85%;
+ 	height: 30px;
+ 	float: left;
+ }
+ header #form_search button{
+	float: left;
+ 	width: 10%;
+ 	height: 30px;
+ 	border: 1px solid #f9c9bb;
+ 	background-color:#FF402B ;	
+ }
+#i_fastfood{ 
+	padding-top: 8px;
+	padding-left: 5%;
+	width: 30%;
+	height: 100px;
+ }
+ #i_fastfood img {
+ 	width: 92%;
+ 	height: 100%;
+ }
+
+/*-------------------------------- mobile*/
+#header-icon-cart{
+	display: none;
+	float: left;
+}
+#header-icon-bars{
+	display: none;
+	float: left;
+}
+.nav__overlay{
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.6);
+	display: none;
+	animation: fadeIn linear 0.3s;
+	z-index: 123;
+}
+#nav-mobile{
+	transform: translateX(100%);
+	background: white;
+	float: right;
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 60%;
+	height: 57%;
+	transition: transform linear 0.2s;
+	z-index: 999;
+}
+#close-nav-mobile-icon{
+	float: left;
+	width: 26px;
+	height: 35px;
+	position: absolute;
+	top: 0.5em;
+	right: 1em;
+	color: #FF402B ;
+}
+.nav-item-title{
+	float: left;
+	width: 70%;
+	height: 35px;
+	position: absolute;
+	top: 1em;
+	left:0em;
+	color: black;
+}
+.nav-item-title span{
+	font-size: 24px;
+	color: #FF402B ;
+}
+.nav-item{
+	float: left;
+	width: 100%;
+	height: auto;
+	padding-top: 50px;
+}
+.nav-mobile-item{
+	padding-top: 40px;
+	width: 100%;
+	height: 2.5em;
+	position: relative;
+	display: block;
+	background-color: white;
+	border: 1px solid #EBE6E6;
+	text-decoration:none;
+	font-size: 20px;
+	color: #737373;
+	padding-top: 7px;
+}
+.nav-mobile-item:hover{
+	background-color:  #FF402B;
+	color: white;
+	text-decoration:none;
+	font-weight: bold;
+}
+ /*---------------------------------------------- Navigation */
+ 
+ nav{
+ 	margin-top: 0px;
+ 	padding-top: 0px;
+ 	clear: both;
+ 	float: left;
+	background-color: #FF402B ;	
+	width: 100%;
+	height: 2.7rem;
+}
+
+nav >ul{
+	padding-left: 3%;
+	list-style-type: none;
+	margin-top: 2px;
+}
+.taskbar{
+	display: inline-block;
+	float: left;
+}
+
+.taskbar a{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    padding:14px 16px; 
+}
+.taskbar :hover{
+    background-color: #FFE8D7 ;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FF402B;
+    border-radius: 4px;
+}
+#log_in{
+	float: right;
+}
+
+
+/*-----------------------------------------footer*/
+footer{
+	clear: both;
+	width: 100%;
+	height: 26rem;
+	background-color: #424242;
+}
+footer *{
+	color: white;
+}
+footer h4{
+	color: #F3591C;
+	font-size: 20px;
+}
+footer a{
+	text-decoration: none;
+	font-size: 17px;
+}
+footer a:hover{
+	color: #F3591C;
+}
+ footer section ul{
+	list-style-type: none;
+}
+#info_Moca{
+	float: left;
+	width: 31%;
+}
+#info_Moca *{
+	padding-left: 2%;
+}
+#info_Moca ul{
+	padding-left: 4%;
+}
+#info_Moca ul li{
+	padding-top: 18px;
+	font-size: 17px;
+}
+#sp_Customer {
+	float: left;
+	width: 33%;
+}
+#sp_Customer *{
+	padding-left:15%; 
+}
+#sp_Customer >ul{
+	padding-left: 2%;
+}
+#sp_Customer ul li {
+	padding-top: 13px;
+	font-size: 17px;
+}
+#contact {
+	float: left;
+	width: 33%;
+}
+#contact *{
+	padding-left: 4%;
+}
+#contact ul li {
+	padding-top: 1rem;
+}
+
+#follow{
+	float: left;
+	width: 100%;
+	height: 60px;
+	margin-top: 10px;
+	padding-left: 5%;
+	border-bottom: 1px solid #F3591C;
+}
+#follow span{
+	font-size: 25px;
+	font-style: italic;
+	color: #F3591C;
+}
+#follow i{
+	color: #F3591C;
+}
+#follow i:hover{
+	color: white;
+}
+@keyframes fadeIn{
+	from{opacity: 0;}
+	to {
+		opacity: 1;
+	}
+}
+
+

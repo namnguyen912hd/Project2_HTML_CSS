@@ -1,0 +1,125 @@
+.overlay{
+			position: fixed;
+			top: 0%;
+			left: 0%;
+			right: 0%;
+			bottom: 0%;
+			background-color: rgba(0,0,0,0.9);
+			display: none;
+		}
+
+		.fom_xoa{
+			position: fixed;
+			background-color: #fff;
+			top: 30%;
+			left: 30%;
+			right: 30%;
+			bottom: 30%;
+			border-radius: 30px;
+			display: none;
+		}
+		.fom_xoa p{
+			text-align: center;
+			color: #2D2B2B;
+			font-size: 28px;
+			padding-top: 8%;
+		}
+		.fom_xoa div{
+			/*float: left;*/
+			padding-left: 30%;
+		}
+		.fom_xoa i{
+			float: right;
+			padding-right: 3%;
+			font-size: 25px;
+			color:  #2D2B2B;
+			padding-top: 10px;
+			cursor: pointer;
+		}
+		.fom_xoa div button{
+			/*float: left;*/
+			width: 90px;
+			margin-left: 10px;
+			border: 1px solid  #514E4E;
+			height: 40px;
+			border-radius: 8px;
+			box-shadow: 0;
+			font-weight: bold;
+			font-size: 15px;
+			cursor: pointer;
+		}
+		.fom_xoa div button:hover{
+			background-color: #417B7D;
+			color: white;
+		}
+		#i{
+			display: none;
+		}
+		#update{
+			position: fixed;
+		    top: 50%;
+		    left: 50%;
+		    z-index: 10;
+		    width: 800px;
+		    background-color: #FFFFFF;
+		    padding: 15px;
+		    border-radius: 8px;
+		    transform-origin: 50% 0%;
+		    transition: 0.4s;
+		    opacity: 0;
+		    visibility: hidden;
+			transform: translate(-50%,-50%) rotateX(-100deg);
+		}
+		.update table td{
+			font-size: 18px;
+		}
+		.update #maloai{
+			height: 30px;
+			width: 180px
+		}
+		.update #maloai option{
+			font-size: 18px;
+		}
+		.update table input{
+			width: 400px;
+			height: 30px;
+			border:  1px solid black;
+		}
+		.update button{
+			width: 120px;
+			height: 50px;
+			font-size: 18px;
+			background-color: #5CD249;
+			border: 1px solid #5788F7;
+			color:white;
+			font-weight: bold;
+		}
+		.update button:hover{
+			background-color: #5788F7;
+		}
+		.update table p{
+			 margin-bottom: 0; 
+			 margin-top: 1px;
+			 font-size: 16px;
+			 color: red;
+			 display:  none;
+		}
+
+
+ 		#insert {
+ 			display: block;
+			position: fixed;
+		    top: 50%;
+		    left: 50%;
+		    z-index: 10;
+		    width: 800px;
+		    background-color: #FFFFFF;
+		    padding: 15px;
+		    border-radius: 8px;
+		    transform-origin: 50% 0%;
+		    transition: 0.4s;
+		    opacity: 0;
+		    visibility: hidden;
+			transform: translate(-50%,-50%) rotateX(-100deg);
+ 		}
+

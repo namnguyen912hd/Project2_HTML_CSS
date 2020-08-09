@@ -1,0 +1,283 @@
+body{
+	background-color: rgba(0,0,0,.01);
+}
+#dish-content{
+	background-color:#F3F3F3;
+	width: 96%;
+	margin: 0px auto;
+}
+#dish-content-title{
+	clear: left;
+	float: left;
+	width: 100%;
+	height:2em;
+	padding-top: 0.4em;
+}
+#dish-content-title span{
+	font-size: 17px;
+}
+#dish-content-title span a{
+	text-decoration: none;
+	color: black;
+}
+.dish-content-container{
+	clear: left;
+	float: left;
+	width: 100%;
+	height: 31.250em;
+	background-color: white;
+}
+.d-c-container-img{
+	width: 50%;
+	height: 100%;
+	align-content: center;
+	float: left;
+}
+.d-c-container-img img{
+	width: 100%;
+	height: 100%;
+}
+.dish-content-info {
+	width:50%;
+	padding-left: 3.125em;
+	float: left;
+}
+.dish-content-info label{
+	color: #888888;
+	font-size: 16px;
+}
+.name span{
+	font-size: 27px;
+	color: #4F4F4F;
+}
+.vote{
+	padding-left: 2.500em;
+	width: 80%;
+	height: 4.375em;
+}
+label{
+	font-weight: bold;
+	font-size: 26px;
+	color: #8F8F8F;
+}
+#v1,#v2,#v3{
+	padding-left: 0.625em;
+	float: left;
+}
+#v1{
+	margin-top:0.938em;
+}
+#v1 u{
+	font-size: 18px;
+	color:  #FF402B; 
+	font-weight: bold;
+}
+#v1 i{
+	color:  #FF402B;
+}
+#v2 p{
+	font-size: 15px;
+	color: #BCBCBC;
+}
+#v3 p{
+	font-size: 15px;
+	color: #BCBCBC;
+}
+.price{
+	clear: left;
+	float: left;
+	width: 100%;
+	height: 3.750em;
+	background-color: #E1E1E1;
+}
+.price >label{
+	float: left;
+	margin-top: 1.250em;
+}
+.price span{
+	float: left;
+	color: #FF402B;
+	font-size: 25px;
+	
+	font-weight: bold;
+	margin-top: 0.5em;
+}
+.price i{
+	float: left;
+	margin-top: 1.250em;
+	padding-left: 2.063em;
+	color:#FF402B;
+}
+.sale{
+	clear: left;
+	padding-top: 1.250em;
+	float: left;
+	height: 3.125em;
+	width: 100%;
+}
+.deliver{
+	clear: left;
+	float: left;
+	padding-top: 1.250em;
+}
+.deliver span{
+	color: #FF402B;
+	font-size: 17px;
+}
+.count{
+	padding-top: 1.250em;
+	height: 3.750em;
+	width: 100%;
+	float: left;
+}
+#sl,#sub,#number,#addi,#product{
+	float: left;
+}
+.count button{
+	width: 40px;
+	height: 30px;
+}
+#sub,#product{
+	padding-left: 35px;
+}
+#number input{
+	text-align: center;
+	border: 1px solid #BFBCBC;
+ 	width: 70px;
+ 	height: 30px;
+}
+.total{
+	float: left;
+	padding-top: 20px;
+}
+.total span{
+	color: #FF402B;
+	font-size: 23px;
+	font-weight: bold;
+}
+.pick {
+	float: left;
+	padding-left: 40px;
+	padding-top: 20px;
+	width: 600px;
+}
+.pick #cart{
+	border: 1px solid #FF402B;
+	background-color: #FCDAC9;
+	width: 200px;
+	height: 60px;
+	text-align: center;
+}
+#cart *{
+	font-size: 16px;
+	color: #FF402B;
+}
+.pick #buy{
+	border: 1px solid #FF402B;
+	background-color: #FF402B;
+	width: 200px;
+	height: 60px;
+	text-align: center;
+}
+#buy *{
+	color: white;
+	font-size: 17px;
+}
+.note{
+	padding-top: 23px;
+	float: left;
+}
+.note *{
+	color: #FF402B;
+}
+.chi_tiet{
+	clear: left;
+	float: left;
+	width: 100%;
+	padding-top: 40px;
+	background-color: white;
+}
+
+.more_info{
+	padding-top: 20px;
+	padding-left: 15px;
+}
+.tit{
+	background: rgba(0,0,0,.03);
+   
+	width: 100%;
+	height: 50px;
+}
+.tit span{
+	float: left;
+	margin-top: 15px;
+	padding-left: 5px;
+	font-size: 20px;
+	font-weight: bold;
+	 color: rgba(0,0,0,.87);
+}
+.tit p{
+	padding-top: 15px;
+	padding-left: 1%;
+	margin-top: 4px;
+	font-size: 20px;
+	font-weight: bold;
+ 	color: rgba(0,0,0,.87);
+}
+.danh_gia{
+	float: left;
+	width: 100%;
+}
+.sao_dgia{
+	width: 100%;
+	height: 120px;
+	background-color: #fffbf8;
+	border: 1px solid #D5D3D3;
+	padding-left: 40px;
+	padding-top: 30px;
+	margin-top: 10px;
+}
+.sao_dgia button{
+	width: 90px;
+	height: 30px;
+}
+#tat_ca,#_5sao,#_4sao,#_3sao,#_2sao,#_1sao{
+	float: left;
+	padding-left: 15px;
+	padding-top: 25px;
+}
+#tat_ca button{
+	color: #FF402B;
+	border: 1px solid #FF402B;
+	background-color: white;
+}
+#sao{
+	float: left;
+	padding-top: 8px;
+}
+#sao *{
+	text-align: center;
+	color: #FF402B;
+	font-size: 22px;
+	font-weight: bold;
+	margin: 0;
+}
+.cmt img{ 
+	width: 100%;
+	background-repeat: no-repeat;
+}
+.l_quan{
+	float: left;
+	width: 100%;
+	height: 400px;
+}
+.sp_khac{
+	clear: both;
+	float: left;
+	width: 100%;
+	height: 400px;
+	
+}
+footer{
+	float: left;
+}

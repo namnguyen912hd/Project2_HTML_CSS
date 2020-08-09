@@ -1,0 +1,91 @@
+#regis-container{
+	width: 100%;
+	height: 1000px;
+	background-image: url(../Image/Register/bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	float: left;
+}
+.regis-overlay{
+	float: left;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.6);
+}
+.regis-content{
+	position: absolute;
+	top: 8%;
+	left: 10%;
+	right: 10%;
+	border: 0;
+	width: 80%;
+	height: 75%;
+	background-color: rgba(0,0,0,0.7);
+	text-align: center;
+	border-radius: 10px;
+	float: left;
+}
+.regis-content h1{
+	color: white;
+}
+.regis-content-img{
+	margin-left: 10%;
+	float: left;
+	width: 40%;
+	height: 60%;
+}
+.regis-content-img img{
+	width: 100%;
+	height: 100%;
+}
+.regis-content-btn{
+	float: left;
+	width: 40%;
+	height: 60%;
+
+}
+.regis-content-btn form input{
+	font-size: 18px;
+	width: 90%;
+	height: 50px;
+	color: white;
+	background-color: rgba(0,0,0,0.3);
+	border:none;
+	border-bottom: 3px solid white;
+	border-radius: 3px;
+	text-align:center;
+}
+#warn-acc,
+#warn-mobile,
+#warn-email,
+#warn-pwd,
+#warn-cfpwd{
+	opacity: 0;
+	margin: 3px;
+	color: red;
+	margin-left: 17px;
+	width: 290px;
+	font-size: 15px;
+	text-align: left;
+}
+.regis-content-btn form button{
+	width: 90%;
+	height: 55px;
+	font-size: 23px;
+	background-color: #FF402B; 
+	border: 1px solid #FF402B;
+	margin-top: 5%;
+	color: white;
+}
+.regis-content-btn form i{
+	padding-left: 2%;
+	color: #FF402B;
+}
+.regis-content-btn form i:hover{
+	color: white;
+}

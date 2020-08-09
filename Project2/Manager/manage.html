@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Manage MocaFastfood</title>
+	<link rel="stylesheet" type="text/css" href="Css/manager.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="Css/m2.css">
+</head>
+<body>
+	<header>
+		<span>MocaFastfood</span>
+		<ul>
+			<li>
+				<a href="../website.html"><i class="fa fa-share" aria-hidden="true"></i>Quay lại trang chủ</a>
+			</li>
+			<li>
+				<a href="#">Admin<i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+			</li>
+		</ul>
+	</header>
+	<div id="manage-menu">
+		<div class="title-menu">
+			<i class="fa fa-bars" aria-hidden="true"></i>
+			<span>Danh mục quản trị</span>
+		</div>
+		<div class="manage-menu-items">
+			<span>&nbsp;&nbsp;&nbsp;Quản trị sản phẩm</span>
+			<a href="kindOfFood.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loại món ăn</a>
+			<a href="manage.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Món ăn</a>
+			<a href="order.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Đơn hàng</a>	
+			<a href="supplier.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhà cung cấp</a>		
+			
+			<a href="service.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dịch vụ</a>
+			
+			<span>&nbsp;&nbsp;&nbsp;<i class="fa fa-user-o" aria-hidden="true"></i>&nbsp;Quản trị người dùng</span>
+			<a href="Staff.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhân viên</a>
+			<a href="user.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Khách hàng</a>
+		</div>
+	</div>
+	<div id="manage-content">
+		<div class="title-manage">
+			<h2>Quản lí món ăn</h2>
+			<button id="btnInsert" onclick="inserted()">Thêm món ăn</button>
+			<form  method="" action="post">
+				<input type="text" name="search" placeholder="search">
+				<button ><i style="color: white;" class="fa fa-search fa-1x" aria-hidden="true" ></i></button>
+			</form>
+		</div>
+		<div class="manage-table-content" id="list">
+			<div class="table" >
+				<table border="1" cellpadding="0" cellspacing="0" style="margin-left:8%;" id="table1">
+					<caption style="font-size: 20px;color: #A2A2A2">--Danh sách món ăn--</caption>
+					<thead >
+						<tr style="height: 30px">
+							<th width="130">Mã loại món ăn</th>
+							<th width="130">Mã món ăn</th>
+							<th width="250">Tên món ăn</th>
+							<th width="120">Giá</th>
+							<th width="170">Mô tả</th>
+							<th width="100">Thao tác</th>
+						</tr>
+					</thead>
+					<tbody style="text-align: center;">
+						<tr id="1">
+							 
+							<td>L001</td>
+							<td>MA001</td>
+							<td>Mực nướng tương hột</td>
+							<td>119000</td>
+							 
+							<td>........</td>
+							<td>
+								<button onclick="capnhap()"><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button onclick="del('1')"><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr id="2">
+							 
+							<td>L004</td>
+							<td>MA002</td>
+							<td>Hamberger bò</td>
+							<td>49000</td>
+							 
+							<td>........</td>
+							<td>
+								<button onclick="capnhap()"><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button onclick="del('2')"><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr id="3">
+							 
+							<td>L001</td>
+							<td>MA003</td>
+							<td>Mực trứng rán</td>
+							<td>99000</td>
+							 
+							<td>........</td>
+							<td>
+								<button onclick="capnhap()"><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button onclick="del('3')"><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr id="4">
+							 
+							<td>L002</td>
+							<td>MA004</td>
+							<td>Gà nướng cả con</td>
+							<td>139000</td>
+							 
+							<td>........</td>
+							<td>
+								<button onclick="capnhap()"><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button onclick="del('4')"><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr id="5">
+							 
+							<td>L002</td>
+							<td>MA005</td>
+							<td>Pizza cà chua</td>
+							<td>121000</td>
+							 
+							<td>........</td>
+							<td>
+								<button onclick="capnhap()"><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button onclick="del('5')"><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr id="6">
+							<td >L003</td>
+							<td >MA006</td>
+							<td >Nem chua rán</td>
+							<td >69000</td> 
+							<td >........</td>
+							<td>
+								<button onclick="capnhap()"><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button onclick="del('6')"><i  class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="overlay" id="overlay"></div>
+		<div class="fom_xoa" id="fom_xoa">
+			<a href="manage.html"><i onclick="delClose()" class="fa fa-window-close" aria-hidden="true"></i></a>
+			<p>bạn có chắc chắn muốn xóa không?</p>
+			<div>
+				<button onclick="Delete()">Có</button>
+				<a href="manage.html"><button onclick="delClose()">Không</button></a>
+			</div>
+		</div>
+		<div class="update" id="update">
+			<i style="float: right; padding: 18px; cursor: pointer; color: #000000" onclick="delUpdate()" class="fa fa-window-close fa-2x" aria-hidden="true"></i>
+			<h1 style="text-align: center;padding-top: 30px">Cập nhập thông tin</h1>
+			<table  cellspacing="5" cellpadding="5" style="margin:0 auto">
+				<tr>
+					<td>Mã loại món ăn:</td>
+					<td>
+						<select  name="" id="maloai">
+							<option value=""></option>
+							<option value="L001">L001</option>
+							<option value="" >L002</option>
+							<option value="" >L003</option>
+							<option value="">L004</option>
+							<option value="">L005</option>
+							<option value="">L006</option>
+							<option value="" >L007</option>
+							<option value="L008" >L008</option>
+						</select>
+						
+					</td>
+				</tr>
+				<tr>
+					<td>Mã món ăn:</td>
+					<td>
+						<input type="text" id="ma" value="MA006" readonly="true" 
+						 >
+					</td>
+				</tr>
+				<tr>
+					<td>Tên món ăn:</td>
+					<td>
+						<input onchange="u_checkName()" type="text" id="ten">
+						<p id="u_name">* Tên không có kí tự đặc biệt và kí tự số</p>
+					</td>
+				</tr>
+				<tr>
+					<td>Giá:</td>
+					<td>
+						<input onchange="u_checkPrice()" type="text" id="gia">
+						<p id="u_price">* Giá phải là số và lớn hơn 10.000 </p>
+					</td>
+				</tr>
+				<tr>
+					<td>Mô tả:</td>
+					<td>
+						<input onchange="u_checkDescript()" type="text" id="mota">
+						<p id="u_descript">* Nội dung mô tả không có kí tự đặc biệt</p>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<button onclick="update()">Cập nhập</button>
+						<button onclick="delUpdate()">Hủy</button>
+					</td>
+				</tr>
+			</table>
+		</div>	
+		<div class="inserted" id="insert" >
+			<h3>Thêm món ăn</h3>
+			<table  cellspacing="0" cellpadding="10">
+				<tr>
+					<td>Mã loại món ăn:</td>
+					<td>
+						<select   id="unitCode">
+							<option value=""></option>
+							<option value="L001">L001</option>
+							<option value="" >L002</option>
+							<option value="" >L003</option>
+							<option value="">L004</option>
+							<option value="">L005</option>
+							<option value="">L006</option>
+							<option value="" >L007</option>
+							<option value="L008" >L008</option>
+						</select>
+						
+					</td>
+				</tr>
+				<tr>
+					<td>Mã món ăn:</td>
+					<td>
+						<input onchange="i_checkCode()" type="text" id="code">
+						<p id="e_code">* Mã món ăn phải có bắt đầu 'MA' và theo sau là 3 kí tự số Vd: MA002 </p>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>Tên món ăn:</td>
+					<td>
+						<input onchange="i_checkName()" type="text" id="name">
+						<p id="e_name">* Tên không có kí tự đặc biệt và kí tự số</p>
+					</td>
+				</tr>
+				<tr>
+					<td>Giá:</td>
+					<td>
+						<input onchange="i_checkPrice()" type="text" id="price">
+						<p id="e_price">* Giá phải là số và lớn hơn 10.000</p>
+					</td>
+					
+				</tr>
+				<tr>
+					<td>Mô tả:</td>
+					<td>
+						<input onchange="i_checkDescript()" type="text" id="descript">
+						<p id="e_descript">* Nội dung mô tả không có kí tự đặc biệt</p>
+					</td>
+					
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<button onclick="SaveInsert()">Thêm món ăn</button>
+						<button onclick="reset()" style="width: 100px;">Reset</button>
+						<button style="width: 100px" onclick="back()">Quay lại</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<script type="text/javascript" src="Js/manage.js"></script>
+</body>
+</html>

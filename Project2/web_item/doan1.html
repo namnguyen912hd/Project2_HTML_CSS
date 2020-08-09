@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gà rán ốc quế MocaFastfood</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../Css/style.css">
+	<link rel="stylesheet" type="text/css" href="Css/doan1.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!------------------------------------------HEADER-->
+	
+	<header>
+		<div id="logo" class="header_left">
+			<a  href="../website.html">
+				<img src="../Image/Header/logo2.png" >
+			</a>
+		</div>
+		<div id="form_search" class="header_left">
+			<form  method="" action="post">
+				<input type="text" name="search" placeholder="Nhập tên sản phẩm...">
+				<button ><i style="color: white;" class="fa fa-search fa-1x" aria-hidden="true" ></i></button>
+			</form>
+		</div>
+		<div id="i_fastfood" class="header_left">
+			<img src="../Image/Header/fastfood1.png">
+		</div>	
+	</header>
+
+	<!-- ------------------------------------------------NAVIGATION -->
+	<nav>
+		<ul>
+			<li class="taskbar">
+				<a href="../website.html" active title="trang_chu"> Trang chủ</a>
+			</li>
+			<li class="taskbar"> 
+				<a href="#" title="gioi_thieu"> Giới thiệu</a>
+			</li>
+			<li class="taskbar">
+				<a href="#" title="tu_van"> Tư vấn</a>
+			</li>
+			<li class="taskbar">
+				<a href="#" title="lien_he"> Liên hệ</a>
+			</li>
+			<li id="log_in">
+				<ul>
+					<li class="taskbar">
+						<a href="cart.html" title="gio_hang">Giỏ hàng<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+					</li>
+					<li class="taskbar">
+						<a href="#" title="dang_ki"> Đăng kí</a>
+					</li>
+					<li class="taskbar">
+						<a href="log_in.html" title="dang_nhap"> Đăng nhập</a>
+					</li>
+				</ul>		
+			</li>	
+		</ul>	
+	</nav>
+
+
+	<!---------------------------------------------- contentt -->
+	<div id="dish-content">
+		<div id="dish-content-title">
+			<span>&nbsp;MocaFastfood&nbsp;&rsaquo;&nbsp;Danh mục&nbsp; &rsaquo;&nbsp; Đồ ăn&nbsp; &rsaquo;&nbsp;Gà rán&nbsp; &rsaquo; &nbsp;Gà rán ốc quế</span>
+		</div>
+		<div class ="dish-content-container">
+			<div class ="d-c-container-img">
+				<img src="../Image/Lastest/m1.jpg" alt="gà rán ốc quế" style="border: 1px solid #818181;">
+			</div>
+			<div class="dish-content-info">
+				<div class="name">
+					<span>Gà rán ốc quế</span>
+				</div>
+				<div class="vote">
+					<div id="v1">
+						<u>5.0</u>
+						<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+						
+					</div>
+					<div id="v2">
+						<p>&nbsp;&nbsp;&#124;&nbsp;&nbsp;92 đánh giá</p>
+					</div>
+					<div id="v3">
+						<p>&nbsp;&nbsp;&#124;&nbsp;&nbsp;163 sản phẩm đã bán</p>
+					</div>
+				</div>
+				<div class="price">
+					<!-- &nbsp;&nbsp; --><label>&nbsp;&nbsp;&nbsp;<strike><u>đ</u>120.000</strike></label>
+					<!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+				
+						<u style="float: left; padding-left: 2.5em;padding-top: 17px;font-size: 20px;color:#FF402B;	font-weight: bold;">đ</u><span id="unitprice">59.000</span>
+			
+					&nbsp;&nbsp;<i>giảm 50&#37;</i>
+				</div>
+				<div class="sale">
+					<label>Combo khuyến mãi:</label>
+					<span>mua 5 sản phẩm giảm 10&#37; ; dưới 1km free ship</span>
+				</div> 
+				<div class="deliver">
+					<label><i class="fa fa-truck" aria-hidden="true"></i>Phí ship:</label>
+					&nbsp;&nbsp;&nbsp;&nbsp;<span><u >đ</u>17.000</span>
+				</div>
+				<div class="count">
+					<div id="sl" style="padding-top: 5px;"><label >Số lượng:</label></div>
+					<div id="sub" >
+						<button id="btnSub" disabled=true onclick="Sub()">&ndash;</button>
+					</div>
+					<div id="number">
+						<input id="soluong" type="text" value="1" readonly="">
+					</div>
+					<div id="addi" >
+						<button onclick="Add()">+</button>
+					</div>
+					<div id="product"><p>sản phẩm</p></div>
+				</div>
+				<div class="total">
+					<label>Tổng tiền:&nbsp;&nbsp;&nbsp;</label>
+					<u style=" padding-left: 2.5em;color:#FF402B;font-size: 21px;	font-weight: bold;">đ</u><span id="total_money">76.000</span>
+				</div>
+				<div class="pick">
+					<a href="log_in.html">
+						<button id="cart" >
+							<i class="fa fa-cart-plus" aria-hidden="true"></i>
+							<span>Thêm vào giỏ hàng</span>
+						</button>
+					</a>
+					<a href="log_in.html">
+						<button id="buy">
+							<b>Mua hàng</b>
+						</button>
+					</a>	
+				</div>
+				<div class ="note">
+					<p><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Chỉ ship khu vực Gia Lộc</p>
+				</div>
+				
+			</div>
+		</div>
+		<div class="chi_tiet">
+			<div id="mo_ta">
+				<div class="tit">
+					<p>Chi tiết sản phẩm</p>
+				</div >
+				<div class="more_info">
+					<table  cellspacing="6" cellpadding="10">
+						<tr>
+							<td>Danh mục</td>
+							<td>
+								<a href="#">MocaFastfood</a>&nbsp;&rsaquo;&nbsp;
+								<a href="#">Mực nướng</a>
+							</td>
+						</tr>
+						<tr>
+							<td>Thương hiệu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+							<td>No brand</td>
+						</tr>
+						<tr>
+							<td>Xuất xứ</td>
+							<td>Gia Lộc</td>
+						</tr>
+						<tr>
+							<td>Có sẵn</td>
+							<td>18 sản phẩm</td>
+						</tr>
+						<tr>
+							<td>Gửi từ</td>
+							<td>Đồng Mơ - thị trấn Gia Lộc - Gia Lộc - Hải Dương</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="more_">
+				<div class="tit">
+					<p>Mô tả sản phẩm</p>
+				</div>
+				<div class="more_info">
+						<p>Nguyên liệu món mực nướng tương hột:</p> 
+						<p>Mực lá nguyên con, Tương hột băm nhỏ 100g</p>
+						<p>Sả băm, ớt băm, Lá cà ri tươi, lá gừng 1 ít,</p>
+						<p>Nước hành tím băm, Nước dừa, dầu điều,</p>
+						<p>Rau sống, dưa leo, cà chua</p>
+						<p>Gia vị: bột ngọt, nước tương, tiêu đen.</p>
+						<p>Xếp xà lách lên đĩa và cho mực lên, cùng dưa leo, cà chua để ăn kèm. </p>
+						<p>Cách nướng mực tương hột sẽ có bạn hương vị thơm béo lạ miệngCách nướng mực tương hột sẽ có bạn hương vị thơm béo lạ miệng</p>
+						<p>khác với món mực nướng thông thường. 
+						Hãy thực hiện và thưởng thức nhéâ</p>
+						<p>Hàng e về rất nhiều luôn sẵn sàng lên đường ạ !</p>
+						<p><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Đảm bảo an toàn thực phẩm</p>
+						<p><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Món ăn lạ miêng</p>
+						<p><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Món ăn được đầu bếp cửa hàng làm cẩn thận</p>
+						<p><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Giá cả của cửa hàng hợp lí tiết kiệm</p>
+						<p><i class="fa fa-check-circle" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;Vận chuyển nhanh chóng</p>
+						<p> 🎀 Các bạn muốn dùng thử và đặt hàng xin liên hệ</p>
+						<p>📲0969990440</p>
+				</div>
+			</div>
+		</div>
+		<div class="danh_gia">
+			<div class="tit">
+					<p>Đánh giá sản phẩm</p>
+			</div>
+			<div class="sao_dgia">
+				<div id="sao">
+					<p>5 trên 5</p>
+					<i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>
+				</div>
+				<div id="tat_ca">
+					<button>Tất cả</button>
+				</div>
+				<div id="_5sao">
+					<button>5 sao (92)</button>
+				</div>
+				<div id="_4sao">
+					<button>4 sao (0)</button>
+				</div>
+				<div id="_3sao">
+					<button> 3 sao (0)</button>
+				</div>
+				<div id="_2sao">
+					<button>2 sao (0)</button>
+				</div>
+				<div id="_1sao">
+					<button>1 sao (0)</button>
+				</div>
+			</div>
+			<div class="cmt">
+				<img src="Image/Sell/add.PNG">
+			</div>
+		</div>
+		<div class="l_quan">
+			<div class="tit">
+				<span>Sản phẩm tương tự</span>
+			</div>
+			<div class="product-item">
+				<a href="#"><img src="Image/Sell/related_products/muc-nuong-muoi-ot.jpg"></a>
+				<a href="#"><p>Mực nướng muối ớt</p></a>
+				<p ><u >đ</u>102.000</p>
+				<a href="#" class="detail"><i>&raquo;Chi tiết</i></a>
+			</div>
+			<div class="product-item">
+				<a href="#"><img src="Image/Sell/related_products/muc_han.jpg"></a>
+				<a href="#"><p>Mực nướng kiểu hàn</p></a>
+				<p ><u >đ</u>89.000</p>
+				<a href="#" class="detail"><i>&raquo;Chi tiết</i></a>
+			</div>
+			<div class="product-item">
+				<a href="#"><img src="Image/Sell/related_products/muc_thai.jpg"></a>
+				<a href="#"><p>Mực cay Thái</p></a>
+				<p ><u >đ</u>79.000</p>
+				<strike><u>đ</u>99.000</strike>
+				<i>-20&#37;</i><br>
+				<a href="#" class="detail"><i>&raquo;Chi tiết</i></a>
+			</div>
+		</div>	
+		<div class="sp_khac">
+			<div class="tit">
+				<span>Có thể bạn cũng thích</span>
+			</div>
+				<div class="product-item">
+					<a href="#"><img src="Image/Ga_ran/g1.jpg"></a>
+					<a href="#"><p>Gà rán ốc quế</p></a>
+					<p ><u>đ</u>59.000</p>
+					<a href="#" class="detail"><i>&raquo;Chi tiết</i></a>
+				</div>
+				<div class="product-item">
+					<a href="#"><img src="Image/Ga_ran/g2.jpg"></a>
+					<a href="#"><p>Cánh gà chiên ròn</p></a>
+					<p ><u >đ</u>88.000</p>
+					<a href="#" class="detail"><i>&raquo;Chi tiết</i></a>
+				</div>
+				<div class="product-item">
+					<a href="#"><img src="Image/Ga_ran/g3.jpg"></a>
+					<a href="#"><p>Đùi gà nướng chanh</p></a>
+					<p ><u >đ</u>33.000</p>
+					<a href="#" class="detail"><i>&raquo;Chi tiết</i></a>
+				</div>
+				<div class="product-item">
+					<a href="#"><img src="Image/Ga_ran/g4.png"></a>
+					<a href="#"><p>Gà chiên chanh xả</p></a>
+					<p ><u >đ</u>49.000</p>
+					<a href="#" class="detail"><i>&raquo;Chi tiết</i></a>
+				</div>			 		
+	
+		</div>	
+	</div>
+	<footer >
+		<div id="follow">
+			<span>Follow us </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;
+			<a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;
+			<a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+		</div>
+		<section id="info_Moca">
+			<h4>CỬA HÀNG MOCA FASTFOOD</h4>
+			<ul>
+				<li>Địa chỉ: khu Đồng Mơ - thị trấn Gia Lộc - huyện Gia Lộc- tỉnh Hải Dương</li>
+				<li>Chủ quán: Trương Tú Oanh</li>	
+				<li>Đầu bếp: Nguyễn Minh Hoàng</li>
+				<li>Đảm bảo an toàn thực phẩm vệ sinh sạch sẽ</li>
+			</ul>
+		</section>
+		<section id="sp_Customer">	
+			<h4>HỖ TRỢ KHÁCH HÀNG</h4>
+			<ul>
+				<li>
+					<a href="#">Hỗ trợ giao hàng</a>
+				</li>
+				<li>
+					<a href="#">Thông tin chuyền khoản</a>
+				</li>
+				<li>
+					<a href="#">Tin cửa hàng</a>
+				</li>
+				<li>
+					<a href="#">Khuyến mãi</a>
+				</li>
+				<li>
+					<a href="#">Câu hỏi thường gặp</a>
+				</li>
+			</ul>		
+		</section>
+		<section id="contact">
+			<h4>LIÊN HỆ</h4>
+			<ul>
+				<li>
+					<i class="fa fa-phone fa-2x" aria-hidden="true"></i>&nbsp;
+					<i>0392243668</i>
+				</li>
+				<li>
+					<i  class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>&nbsp;
+					<i> MocaFastFood fanpage</i><br>
+				</li>
+				<li>
+					<i  class="fa fa-instagram fa-2x" aria-hidden="true"></i>&nbsp;
+					<i> MocaFastFood_gl</i><br>
+				</li>
+				<li>
+					<i  class="fa fa-google fa-2x" aria-hidden="true"></i>&nbsp;
+					<i> mocafastfoodgl@gmail.com</i><br>
+				</li>
+			</ul>
+		</section>	
+	</footer>
+	<script type="text/javascript">
+		function Add(){
+			var count=parseInt(document.getElementById('soluong').value);
+			count+=1;
+			document.getElementById('soluong').value=count.toString();
+			var unitprice=parseInt(document.getElementById('unitprice').innerHTML);
+			var total=(count*unitprice)+17;
+			document.getElementById('total_money').innerHTML=(total+".000");
+			if (parseInt(document.getElementById('soluong').value)>1) {
+				document.getElementById('btnSub').disabled=false;
+			}
+		}
+		function Sub(){
+			var count=parseInt(document.getElementById('soluong').value);
+			count-=1;
+			document.getElementById('soluong').value=count.toString();
+			var unitprice=parseInt(document.getElementById('unitprice').innerHTML);
+			var total=(count*unitprice)+17;
+			document.getElementById('total_money').innerHTML=(total+".000");
+			if (parseInt(document.getElementById('soluong').value)<=1) {
+				document.getElementById('btnSub').disabled=true;
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+.table table>tr>th{
+	margin: 3px;
+}
+#tt{
+	color: red;
+}
+#btnAll{
+	cursor: pointer;
+}
+#btnComplete,
+#btnShip{
+	opacity: 0.5;
+	cursor: pointer;
+}
+.inserted{
+	padding-left: 150px;
+	display: none;
+}
+#orderShip{
+	display: none;
+}
+#orderCom{
+	display: none;
+}

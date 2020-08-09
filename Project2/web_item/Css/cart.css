@@ -1,0 +1,231 @@
+
+#user{
+	float: right;
+	padding-right: 5px;
+}
+.i_user{
+	display: inline-block;
+	position: relative;
+}
+.i_user a{
+	display:inline-block;
+    text-decoration:none;
+    font-style: bold;
+    color:white;
+}
+.i_user:hover ul{
+	/*visibility: visible;*/
+	background:red;
+	display: block;
+}
+.i_user ul {
+	position: absolute;
+	display: inline-block;
+	/*visibility: hidden;*/
+	border: 1px solid red;
+	width: 300px;
+	z-index: 999;
+	top: 40px;
+	right: 0;
+	display: none;
+}
+.i_user ul li {
+	width: 200px;
+	height: 30px;
+	line-height: 40px;
+}
+
+/*-------------------------------content cart*/
+body{
+	background-color: rgba(0,0,0,0.033);
+}
+#content_cart{
+	width: 1200px;
+	margin: 0px auto;
+}
+/*------------- products */
+#products{
+	width: 70%;
+	float: left;
+}
+
+#select_all,.product{
+	width: 100%;
+	background-color: white;
+	margin-top: 20px;
+	float: left;
+}
+#select_all input{
+ 	width: 25px;
+ 	height: 25px;
+ 	float: left;
+ 	cursor: pointer;
+}
+#select_all span{
+	padding-top: 8px;
+	float: left;
+	padding-left: 5px;
+	cursor: pointer;
+}
+#select_all a{
+	text-decoration: none;
+	color: black;
+}
+#select_all a:hover{
+	color:  #FF402B; 
+	text-decoration: underline;
+}
+#delete_all{
+	padding-left: 500px;
+}
+
+
+
+.product>*{
+	float: left;
+}
+.product .select input{
+	width: 25px;
+ 	height: 25px;
+ 	margin-top: 85px;
+}
+.img_product img {
+	width: 160px;
+	height: 180px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.info_product{
+	width: 220px;
+}
+.info_product>*{
+	margin-left: 20px;
+}
+.info_product>a{
+	color: black;
+	text-decoration: none;
+}
+.info_product>a:hover{
+	color: #FF402B; 
+	text-decoration: underline;
+}
+.info_product i:hover{
+	color: #FF402B; 
+}
+.info_product span a{
+	color: #FF402B; 
+	text-decoration: none;
+}
+.price_product{
+	width: 120px;
+	height: 100%;
+}
+.price_product span{
+	color: red;
+}
+.count_product>*{
+	float: left;
+}
+.count_product input{
+	width: 50px;
+	height: 28px;
+	text-align: center;
+}
+.count_product button{
+	width: 25px;
+	height: 28px;
+}
+.count_product #sub{
+	padding-left: 30px;
+}
+#total-money{
+	color:  red;
+	float: left; 
+	margin-top: 23px;
+    margin-left: 67px;
+}
+/*------------- bill */
+#bill{
+	float: left;
+	margin-top: 20px;
+	margin-left: 15px;
+	width: 28%;
+	background-color: white;
+}
+#bill>*{
+	padding-left: 5px;
+}
+#bill span{
+	color:  red;
+	font-size: 18px;
+	padding-left: 2px;
+}
+
+#discount_bill input{
+	width: 70%;
+	height: 40px;
+	border:1px solid  #FF7E00;
+}
+#discount_bill button{
+	width: 27%;
+	height: 40px;
+	margin-left: 0px;
+	background-color: #FF7E00;
+	border: 1px solid  #FF7E00;
+	color: white;
+	font-weight: bold;
+}
+
+#total_price i{
+	color:#767676;
+	font-size: 14px;
+}
+#confirm button{
+	width: 100%;
+	height: 45px;
+	background-color: #FF402B;
+	border: 1px solid #FF402B;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+}
+.title_item{
+	width: 100%;
+	margin-top: 4%;x
+	margin-left: 30px;
+	height: 50px;
+	float: left;
+	background-color: #DBDADA;
+}
+.title_item p{
+	font-size: 21px;
+	margin-top: 15px;
+	font-weight: bold;
+	padding-left: 8px;
+	color: #615C5C;
+}
+#c_event{
+	margin-top: 50px;
+	border-top: 1px solid black;
+	width: 100%;
+	height: auto;
+}
+#c_event p{
+	margin-top: 6px;
+	width: 100%;
+	font-size: 21px;
+	color: red
+}
+#c_event img{
+	width: 100%;
+	height: 180px;
+}
+
+
+
+
+footer{
+	margin-top:  100px;
+}
+
+

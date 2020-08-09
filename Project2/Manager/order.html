@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Order</title>
+	<link rel="stylesheet" type="text/css" href="Css/manager.css">
+	<link rel="stylesheet" type="text/css" href="Css/order.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header>
+		<span>MocaFastfood</span>
+	</header>
+	<div id="manage-menu">
+		<div class="title-menu">
+			<i class="fa fa-bars" aria-hidden="true"></i>
+			<span>Danh mục quản trị</span>
+		</div>
+		<div class="manage-menu-items">
+			<span>&nbsp;&nbsp;&nbsp;Quản trị sản phẩm</span>
+			<a href="kindOfFood.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loại món ăn</a>
+			<a href="manage.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Món ăn</a>
+			<a href="order.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Đơn hàng</a>	
+			<a href="supplier.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhà cung cấp</a>		
+			
+			<a href="service.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dịch vụ</a>
+			
+			<span>&nbsp;&nbsp;&nbsp;<i class="fa fa-user-o" aria-hidden="true"></i>&nbsp;Quản trị người dùng</span>
+			<a href="Staff.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhân viên</a>
+			<a href="user.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Khách hàng</a>
+		</div>
+	</div>
+	<div id="manage-content">
+		<div class="title-manage">
+			<h2>Quản lí đơn hàng</h2>
+			<button id="btnInsert" onclick="insert()">Thêm đơn hàng</button>
+			<form  method="" action="post">
+				<input type="text" name="search" placeholder="search">
+				<button ><i style="color: white;" class="fa fa-search fa-1x" aria-hidden="true" ></i></button>
+			</form>
+		</div>
+		<div class="manage-table-content" id="list">
+			<dir class="btnOrder">
+				<span>Đơn hàng:</span>
+				<button id="btnAll" onclick="clickAll()">Tất cả</button>
+				<button id="btnShip" onclick="clickShip()">Đang giao</button>
+				<button id="btnComplete" onclick="clickCom()">Đã hoàn thành</button>
+			</dir>
+			<div class="table" id="table">
+				<table border="1" cellpadding="0" cellspacing="0">
+					<caption style="font-size: 20px;color: #A2A2A2">--Danh sách đơn hàng--</caption>
+					<thead >
+						<tr style="height: 30px">
+							<th width="30">STT</th>
+							<th width="100">Mã đơn hàng</th>
+							<th width="90">Mã món ăn</th>
+							<th width="70">Số lượng</th>
+							<th >Người nhận</th>
+							<th width="170" >Địa chỉ nhận</th>
+							<th >SDT</th>
+							<th width="80">Ngày lập</th>
+							<th width="70">Phí ship</th>
+							<th width="80">Tổng tiền</th>
+							<th width="80">Tình trạng</th>
+							<th width="80">Thao tác</th>
+						</tr>
+					</thead>
+					<tbody style="text-align: center;">
+						<tr >
+							<td>1</td>
+							<td>DH018</td>
+							<td>MA005</td>
+							<td>2</td>
+							<td>Trương Tú Oanh</td>
+							<td>Chợ Phe-Hồng Hưng</td>
+							<td>
+								0934837529
+							</td>
+							<td>22/06/2020</td>
+							<td>17000</td>
+							<td>129000</td>
+							<td id="tt">đang giao</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>2</td>
+							<td>DH017</td>
+							<td>MA008</td>
+							<td>1</td>
+							<td>Bùi Thị Phương</td>
+							<td>Xóm Bông- Thị trấn</td>
+							<td>
+								0382745328
+							</td>
+							<td>22/06/2020</td>
+							<td>17000</td>
+							<td>89000</td>
+							<td id="tt">đang giao</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>3</td>
+							<td>DH016</td>
+							<td>MA006</td>
+							<td>1</td>
+							<td>Lê Thùy Dương</td>
+							<td>Làng Mạc-Hồng Hưng</td>
+							<td>
+								04928535312
+							</td>
+							<td>22/06/2020</td>
+							<td>17000</td>
+							<td>96000</td>
+							<td id="tt">đang giao</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>4</td>
+							<td>DH015</td>
+							<td>MA002</td>
+							<td>2</td>
+							<td>Đàm Văn Long</td>
+							<td>Làng Vũ-Thạch Khôi</td>
+							<td>
+								0925374832
+							</td>
+							<td>22/06/2020</td>
+							<td>0</td>
+							<td>127000</td>
+							<td id="tt">đang giao</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>5</td>
+							<td>DH014</td>
+							<td>MA001</td>
+							<td>1</td>
+							<td>Đỗ Đức Thanh</td>
+							<td>Văn Lâm-Hoàng Diệu</td>
+							<td>
+								0492648343
+							</td>
+							<td>22/06/2020</td>
+							<td>17000</td>
+							<td>69000</td>
+						<td id="tt">đang giao</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>6</td>
+							<td>DH013</td>
+							<td>MA003</td>
+							<td>3</td>
+							<td>Bùi Ngọc Anh</td>
+							<td>An Nghĩa-Gia Khánh</td>
+							<td>
+								0835275343
+							</td>
+							<td>22/06/2020</td>
+							<td>0</td>
+							<td>221000</td>
+							<td id="tt">đang giao</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>7</td>
+							<td>DH012</td>
+							<td>MA001</td>
+							<td>1</td>
+							<td>Nguyễn Đình Phúc</td>
+							<td>Làng Giỗ-Thị trấn</td>
+							<td>
+								0492648343
+							</td>
+							<td>13/06/2020</td>
+							<td>17000</td>
+							<td>77000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>8</td>
+							<td>DH011</td>
+							<td>MA003</td>
+							<td>6</td>
+							<td>Vũ Quý Thơi</td>
+							<td>Trấn Thủy-Trùng Khánh</td>
+							<td>
+								0835275343
+							</td>
+							<td>13/06/2020</td>
+							<td>0</td>
+							<td>421000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>9</td>
+							<td>DH010</td>
+							<td>MA001</td>
+							<td>5</td>
+							<td>Ngô Hải Yến</td>
+							<td>Phong Lâm-Hoàng Diệu</td>
+							<td>
+								0492648343
+							</td>
+							<td>13/06/2020</td>
+							<td>17000</td>
+							<td>189000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>10</td>
+							<td>DH009</td>
+							<td>MA003</td>
+							<td>2</td>
+							<td>Đỗ Thu Phương</td>
+							<td>Phong Lâm- Hoàng Diệu</td>
+							<td>
+								0835275343
+							</td>
+							<td>13/06/2020</td>
+							<td>0</td>
+							<td>143000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>11</td>
+							<td>DH008</td>
+							<td>MA001</td>
+							<td>1</td>
+							<td>Đỗ Việt Hòa</td>
+							<td>Văn Lâm-Hoàng Diệu</td>
+							<td>
+								0492648343
+							</td>
+							<td>13/06/2020</td>
+							<td>17000</td>
+							<td>99000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>12</td>
+							<td>DH007</td>
+							<td>MA003</td>
+							<td>3</td>
+							<td>Bùi Ngọc Anh</td>
+							<td>An Nghĩa-Gia Khánh</td>
+							<td>
+								0835275343
+							</td>
+							<td>13/06/2020</td>
+							<td>0</td>
+							<td>287000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>13</td>
+							<td>DH006</td>
+							<td>MA001</td>
+							<td>1</td>
+							<td>Nguyễn Văn Khương</td>
+							<td>Văn Lâm-Hoàng Diệu</td>
+							<td>
+								0492644444
+							</td>
+							<td>13/06/2020</td>
+							<td>17000</td>
+							<td>154000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>14</td>
+							<td>DH005</td>
+							<td>MA003</td>
+							<td>2</td>
+							<td>Phạm Thùy Anh</td>
+							<td>An Nghĩa-Gia Khánh</td>
+							<td>
+								0835275333
+							</td>
+							<td>13/06/2020</td>
+							<td>0</td>
+							<td>121000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>15</td>
+							<td>DH004</td>
+							<td>MA001</td>
+							<td>1</td>
+							<td>Đỗ Đức Thanh</td>
+							<td>Văn Lâm-Hoàng Diệu</td>
+							<td>
+								0492648343
+							</td>
+							<td>13/06/2020</td>
+							<td>17000</td>
+							<td>89000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>16</td>
+							<td>DH003</td>
+							<td>MA003</td>
+							<td>3</td>
+							<td>Đỗ Bá Minh</td>
+							<td>Trúc Lâm-Gia Khánh</td>
+							<td>
+								0835275343
+							</td>
+							<td>10/06/2020</td>
+							<td>0</td>
+							<td>221000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>17</td>
+							<td>DH002</td>
+							<td>MA001</td>
+							<td>1</td>
+							<td>Phạm Gia Hải</td>
+							<td>Văn Lâm-Hoàng Diệu</td>
+							<td>
+								0492648343
+							</td>
+							<td>10/06/2020</td>
+							<td>17000</td>
+							<td>69000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>18</td>
+							<td>DH001</td>
+							<td>MA003</td>
+							<td>3</td>
+							<td>Đỗ Mai Trang</td>
+							<td>Đồng Mơ- thị trấn</td>
+							<td>
+								0835275343
+							</td>
+							<td>10/06/2020</td>
+							<td>0</td>
+							<td>221000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="inserted" id="insert">
+			<h3>Thêm đơn hàng</h3>
+			<table  cellspacing="0" cellpadding="10">
+				<tr>
+					<td>Mã đơn hàng:</td>
+					<td>
+						<input type="text" name="">
+					</td>
+					<td>Mã món ăn:</td>
+					<td>
+						<select  name="" id="">
+							<option value=""></option>
+							<option value="">MA001</option>
+							<option value="" >MA002</option>
+							<option value="" >MA003</option>
+							<option value="">MA004</option>
+							<option value="">MA005</option>
+							<option value="">MA006</option>
+							<option value="" >MA007</option>
+							<option value="" >MA008</option>
+							<option value="">MA009</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Số lượng:</td>
+					<td><input type="text" name=""></td>
+					<td>Người nhận:</td>
+					<td><input type="text" name=""></td>
+				</tr>
+				<tr>
+					<td>Địa chỉ nhận:</td>
+					<td><input type="text" name=""></td>
+					<td>Số điện thoại:</td>
+					<td><input type="text" name=""></td>
+				</tr>
+				<tr>
+					<td>Ngày lập:</td>
+					<td><input type="date" name=""></td>
+					<td>Phí ship:</td>
+					<td><input type="text" name=""></td>
+				</tr>
+				<tr>
+					<td>Tổng tiền:</td>
+					<td><input type="text" name=""></td>
+					<td>Tình trạng:</td>
+					<td>
+						<select>
+							<option>Đang giao</option>
+							<option>Hoàn thành</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<button>Thêm món ăn</button>
+						<button>Reset</button>
+						<button onclick="back()">Quay lại</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="orderShip">
+			<div class="table" >
+				<table border="1" cellpadding="0" cellspacing="0">
+					<caption style="font-size: 20px;color: #A2A2A2">--Danh sách đơn hàng--</caption>
+					<thead >
+						<tr style="height: 30px">
+							<th width="30">STT</th>
+							<th width="100">Mã đơn hàng</th>
+							<th width="90">Mã món ăn</th>
+							<th width="70">Số lượng</th>
+							<th >Người nhận</th>
+							<th width="170" >Địa chỉ nhận</th>
+							<th >SDT</th>
+							<th width="80">Ngày lập</th>
+							<th width="70">Phí ship</th>
+							<th width="80">Tổng tiền</th>
+							<th width="80">Tình trạng</th>
+							<th width="80">Thao tác</th>
+						</tr>
+					</thead>
+					<tbody style="text-align: center;">
+						<tr >
+							<td>1</td>
+							<td>DH018</td>
+							<td>MA005</td>
+							<td>2</td>
+							<td>Trương Tú Oanh</td>
+							<td>Chợ Phe-Hồng Hưng</td>
+							<td>
+								0934837529
+							</td>
+							<td>22/06/2020</td>
+							<td>17000</td>
+							<td>129000</td>
+							<td id="tt">đang giao</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>2</td>
+							<td>DH017</td>
+							<td>MA008</td>
+							<td>1</td>
+							<td>Bùi Thị Phương</td>
+							<td>Xóm Bông- Thị trấn</td>
+							<td>
+								0382745328
+							</td>
+							<td>22/06/2020</td>
+							<td>17000</td>
+							<td>89000</td>
+							<td id="tt">đang giao</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>3</td>
+							<td>DH016</td>
+							<td>MA006</td>
+							<td>1</td>
+							<td>Lê Thùy Dương</td>
+							<td>Làng Mạc-Hồng Hưng</td>
+							<td>
+								04928535312
+							</td>
+							<td>22/06/2020</td>
+							<td>17000</td>
+							<td>96000</td>
+							<td id="tt">đang giao</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>4</td>
+							<td>DH015</td>
+							<td>MA002</td>
+							<td>2</td>
+							<td>Đàm Văn Long</td>
+							<td>Làng Vũ-Thạch Khôi</td>
+							<td>
+								0925374832
+							</td>
+							<td>22/06/2020</td>
+							<td>0</td>
+							<td>127000</td>
+							<td id="tt">đang giao</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>5</td>
+							<td>DH014</td>
+							<td>MA001</td>
+							<td>1</td>
+							<td>Đỗ Đức Thanh</td>
+							<td>Văn Lâm-Hoàng Diệu</td>
+							<td>
+								0492648343
+							</td>
+							<td>22/06/2020</td>
+							<td>17000</td>
+							<td>69000</td>
+						<td id="tt">đang giao</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>6</td>
+							<td>DH013</td>
+							<td>MA003</td>
+							<td>3</td>
+							<td>Bùi Ngọc Anh</td>
+							<td>An Nghĩa-Gia Khánh</td>
+							<td>
+								0835275343
+							</td>
+							<td>22/06/2020</td>
+							<td>0</td>
+							<td>221000</td>
+							<td id="tt">đang giao</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div id="orderCom">
+			<div class="table" >
+				<table border="1" cellpadding="0" cellspacing="0">
+					<caption style="font-size: 20px;color: #A2A2A2">--Danh sách đơn hàng--</caption>
+					<thead >
+						<tr style="height: 30px">
+							<th width="30">STT</th>
+							<th width="100">Mã đơn hàng</th>
+							<th width="90">Mã món ăn</th>
+							<th width="70">Số lượng</th>
+							<th >Người nhận</th>
+							<th width="170" >Địa chỉ nhận</th>
+							<th >SDT</th>
+							<th width="80">Ngày lập</th>
+							<th width="70">Phí ship</th>
+							<th width="80">Tổng tiền</th>
+							<th width="80">Tình trạng</th>
+							<th width="80">Thao tác</th>
+						</tr>
+					</thead>
+					<tbody style="text-align: center;">
+						<tr >
+							<td>1</td>
+							<td>DH012</td>
+							<td>MA001</td>
+							<td>1</td>
+							<td>Nguyễn Đình Phúc</td>
+							<td>Làng Giỗ-Thị trấn</td>
+							<td>
+								0492648343
+							</td>
+							<td>13/06/2020</td>
+							<td>17000</td>
+							<td>77000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>2</td>
+							<td>DH011</td>
+							<td>MA003</td>
+							<td>6</td>
+							<td>Vũ Quý Thơi</td>
+							<td>Trấn Thủy-Trùng Khánh</td>
+							<td>
+								0835275343
+							</td>
+							<td>13/06/2020</td>
+							<td>0</td>
+							<td>421000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>3</td>
+							<td>DH010</td>
+							<td>MA001</td>
+							<td>5</td>
+							<td>Ngô Hải Yến</td>
+							<td>Phong Lâm-Hoàng Diệu</td>
+							<td>
+								0492648343
+							</td>
+							<td>13/06/2020</td>
+							<td>17000</td>
+							<td>189000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>4</td>
+							<td>DH009</td>
+							<td>MA003</td>
+							<td>2</td>
+							<td>Đỗ Thu Phương</td>
+							<td>Phong Lâm- Hoàng Diệu</td>
+							<td>
+								0835275343
+							</td>
+							<td>13/06/2020</td>
+							<td>0</td>
+							<td>143000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>5</td>
+							<td>DH008</td>
+							<td>MA001</td>
+							<td>1</td>
+							<td>Đỗ Việt Hòa</td>
+							<td>Văn Lâm-Hoàng Diệu</td>
+							<td>
+								0492648343
+							</td>
+							<td>13/06/2020</td>
+							<td>17000</td>
+							<td>99000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>6</td>
+							<td>DH007</td>
+							<td>MA003</td>
+							<td>3</td>
+							<td>Bùi Ngọc Anh</td>
+							<td>An Nghĩa-Gia Khánh</td>
+							<td>
+								0835275343
+							</td>
+							<td>13/06/2020</td>
+							<td>0</td>
+							<td>287000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>7</td>
+							<td>DH006</td>
+							<td>MA001</td>
+							<td>1</td>
+							<td>Nguyễn Văn Khương</td>
+							<td>Văn Lâm-Hoàng Diệu</td>
+							<td>
+								0492644444
+							</td>
+							<td>13/06/2020</td>
+							<td>17000</td>
+							<td>154000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>8</td>
+							<td>DH005</td>
+							<td>MA003</td>
+							<td>2</td>
+							<td>Phạm Thùy Anh</td>
+							<td>An Nghĩa-Gia Khánh</td>
+							<td>
+								0835275333
+							</td>
+							<td>13/06/2020</td>
+							<td>0</td>
+							<td>121000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>9</td>
+							<td>DH004</td>
+							<td>MA001</td>
+							<td>1</td>
+							<td>Đỗ Đức Thanh</td>
+							<td>Văn Lâm-Hoàng Diệu</td>
+							<td>
+								0492648343
+							</td>
+							<td>13/06/2020</td>
+							<td>17000</td>
+							<td>89000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>10</td>
+							<td>DH003</td>
+							<td>MA003</td>
+							<td>3</td>
+							<td>Đỗ Bá Minh</td>
+							<td>Trúc Lâm-Gia Khánh</td>
+							<td>
+								0835275343
+							</td>
+							<td>10/06/2020</td>
+							<td>0</td>
+							<td>221000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>11</td>
+							<td>DH002</td>
+							<td>MA001</td>
+							<td>1</td>
+							<td>Phạm Gia Hải</td>
+							<td>Văn Lâm-Hoàng Diệu</td>
+							<td>
+								0492648343
+							</td>
+							<td>10/06/2020</td>
+							<td>17000</td>
+							<td>69000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>12</td>
+							<td>DH001</td>
+							<td>MA003</td>
+							<td>3</td>
+							<td>Đỗ Mai Trang</td>
+							<td>Đồng Mơ- thị trấn</td>
+							<td>
+								0835275343
+							</td>
+							<td>10/06/2020</td>
+							<td>0</td>
+							<td>221000</td>
+							<td >hoàn thành</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function insert() {
+			document.getElementById('list').style.display='none';
+			document.getElementById('insert').style.display='block';
+			document.getElementById('btnInsert').style.opacity='0.3';
+		}
+		function back(){
+			document.getElementById('list').style.display='block';
+			document.getElementById('insert').style.display='none';
+			document.getElementById('btnInsert').style.opacity='1';
+		}
+		function clickAll(){
+			document.getElementById('btnAll').style.opacity='1';
+			document.getElementById('btnComplete').style.opacity='0.5';
+			document.getElementById('btnShip').style.opacity='0.5';
+			document.getElementById('table').style.display='block';
+			document.getElementById('insert').style.display='none';
+			document.getElementById('orderShip').style.display='none';
+			document.getElementById('orderCom').style.display='none';
+		}
+		function clickShip(){
+			document.getElementById('btnAll').style.opacity='0.5';
+			document.getElementById('btnComplete').style.opacity='0.5';
+			document.getElementById('btnShip').style.opacity='1';
+			document.getElementById('table').style.display='none';
+			document.getElementById('insert').style.display='none';
+			document.getElementById('orderShip').style.display='block';
+			document.getElementById('orderCom').style.display='none';
+		}
+		function clickCom(){
+			document.getElementById('btnAll').style.opacity='0.5';
+			document.getElementById('btnComplete').style.opacity='1';
+			document.getElementById('btnShip').style.opacity='0.5';
+			document.getElementById('table').style.display='none';
+			document.getElementById('insert').style.display='none';
+			document.getElementById('orderShip').style.display='none';
+			document.getElementById('orderCom').style.display='block';
+		}
+	</script>
+</body>
+</html>

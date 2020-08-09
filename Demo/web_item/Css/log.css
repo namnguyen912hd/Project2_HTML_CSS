@@ -1,0 +1,94 @@
+#content_login{
+	padding-top: 120px;
+	margin: 0px auto;
+	width: 900px;
+	height: 450px;
+}
+#para{
+	float: left;
+	width: 100%;
+}
+#para #large{
+	float: left;
+	width: 600px;
+}
+#large p{
+	font-size: 21px;
+}
+#small{
+	float: left;
+	width: 300px;
+}
+#small p{
+	color: #ADADAD;
+	padding-top: 10px;
+	padding-left: 80px; 
+	font-size: 14px;
+}
+#write_down{
+	padding-top: 25px;
+	float: left;
+	width: 550px;
+	height: 420px;
+}
+#account input{
+	width: 400px;
+	height: 40px;
+}
+#pass{
+	padding-top: 30px;
+}
+#pass input{
+	width: 400px;
+	height: 40px;
+}
+#pass a{
+	padding-left: 300px;
+}
+#form{
+	padding-top: 35px;
+	width: 350px;
+	height: 420px;
+	float: left;
+}
+#form #log{
+	border: 1px #FF402B;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	width: 100%;
+	height: 50px;
+	background-color: #FF402B;
+	border-radius: 5px;
+}
+#form p{
+	color: #A5A5A5;
+	padding-top: 4px;
+}
+#facebook {
+	border: 1px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	width: 100%;
+	height: 50px;
+	background-color:#4848FE;
+	border-radius: 5px;
+}
+#gg{
+	margin-top: 5px;
+	border: 1px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	color: white;
+	width: 100%;
+	height: 50px;
+	background-color: #EE4949;
+	border-radius: 5px;
+}
+footer{
+	float: left;
+}

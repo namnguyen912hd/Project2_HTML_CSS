@@ -1,0 +1,119 @@
+@import 'slide.css';
+@import 'content.css';
+*{
+	box-sizing: border-box;
+}
+html,body{
+	
+	font-style: Tahoma;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	 
+}
+#content{
+	background-color:#F3F3F3;
+}
+/*------------------------------------------------------header*/
+header{
+	width: 100%;
+	float: left;
+	background:  #FF402B;  
+
+}
+.header_left{
+	float: left;
+}
+#logo{
+	padding-left: 50px;
+}
+#form_search{
+	padding-top: 50px; 
+	padding-left: 150px; }
+#i_fastfood{ 
+	padding-top: 8px;
+	float: right;
+	padding-right: 60px;
+ }
+ header #form_search input{
+ 	border: 1px solid #f9c9bb;
+ 	width: 380px;
+ 	height: 30px;
+ 	float: left;
+ }
+ header #form_search button{
+	float: left;
+ 	background: url(../Image/Header/search.png);
+ 	width: 30px;
+ 	height: 30px;
+ 	border: 1px solid #f9c9bb;
+ 	background-repeat: none;
+ }
+ /*---------------------------------------------- Navigation */
+ nav{
+ 	clear: both;
+	background-color: #FF402B ;	
+}
+
+nav ul{
+	margin: 0;
+	padding-left: 47px;
+	list-style-type: none;
+}
+
+.taskbar{
+	display: inline-block;
+}
+
+.taskbar a{
+    display:inline-block;
+    text-decoration:none;
+    font-style: bold;
+    color:white;
+    padding:14px 16px; 
+}
+.taskbar :hover{
+    background-color: #FFE8D7 ;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FF402B;
+    border-radius: 4px;
+}
+#log_in{
+	float: right;
+}
+
+/*----------------------------------------------------------------- Menu */
+#menu{
+	border-top: none;
+	width: 300px;
+	height: 650px;
+}
+#menu a:hover{
+	color: white;
+	background-color: #FF402B ;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#menu b{
+	padding-left: 20px;
+	font-size: 20px;
+	color: #FF402B;
+}
+#menu p{
+	padding-top: 20px;
+	padding-left: 20px;
+	color: #FF402B;
+	font-weight: bold;
+	font-size: 20px;
+}
+#menu p:before{
+	content:"\f0c9";
+	font-family:"FontAwesome";
+	position: absolute;
+	left: 0px;
+	padding-left: 10px;
+}
+

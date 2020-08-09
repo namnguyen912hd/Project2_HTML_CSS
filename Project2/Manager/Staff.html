@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Manage MocaFastfood</title>
+	<link rel="stylesheet" type="text/css" href="Css/manager.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header>
+		<span>MocaFastfood</span>
+		<ul>
+			<li>
+				<a href="../website.html"><i class="fa fa-share" aria-hidden="true"></i>Quay lại trang chủ</a>
+			</li>
+			<li>
+				<a href="#">Admin<i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+			</li>
+		</ul>
+	</header>
+	<div id="manage-menu">
+		<div class="title-menu">
+			<i class="fa fa-bars" aria-hidden="true"></i>
+			<span>Danh mục quản trị</span>
+		</div>
+		<div class="manage-menu-items">
+			<span>&nbsp;&nbsp;&nbsp;Quản trị sản phẩm</span>
+			<a href="kindOfFood.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loại món ăn</a>
+			<a href="manage.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Món ăn</a>
+			<a href="order.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Đơn hàng</a>	
+			<a href="supplier.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhà cung cấp</a>		
+			
+			<a href="service.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dịch vụ</a>
+			
+			<span>&nbsp;&nbsp;&nbsp;<i class="fa fa-user-o" aria-hidden="true"></i>&nbsp;Quản trị người dùng</span>
+			<a href="Staff.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhân viên</a>
+			<a href="user.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Khách hàng</a>
+		</div>
+	</div>
+	<div id="manage-content">
+		<div class="title-manage">
+			<h2>Quản lí nhân viên</h2>
+			<button id="btnInsert" onclick="insert()">Thêm nhân viên</button>
+			<form  method="" action="post">
+				<input type="text" name="search" placeholder="search">
+				<button ><i style="color: white;" class="fa fa-search fa-1x" aria-hidden="true" ></i></button>
+			</form>
+		</div>
+		<div class="manage-table-content" id="list">
+			<div class="table" >
+				<table border="1" cellpadding="0" cellspacing="0">
+					<caption style="font-size: 20px;color: #A2A2A2">--Danh sách nhân viên--</caption>
+					<thead >
+						<tr style="height: 30px">
+							<th width="50">STT</th>
+							<th width="110">Mã nhân viên</th>
+							<th width="150">Tên nhân viên</th>
+							<th width="180">Địa chỉ</th>
+							<th width="100">SĐT</th>
+							<th width="100">Email</th>
+							<th width="90">Chức vụ</th>
+							<th width="90">Thời gian</th>
+							<th width="100">Thao tác</th>
+						</tr>
+					</thead>
+					<tbody style="text-align: center;">
+						<tr >
+							<td>1</td>
+							<td>NV001</td>
+							<td>Trương Tú Oanh</td>
+							<td>Hồng Hưng - Gia Lộc</td>
+							<td>0935678453</td>
+							<td>
+								oanhtruong0809@gmail.com
+							</td>
+							<td>Quản lí</td>
+							<td>Full-time</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>2</td>
+							<td>NV002</td>
+							<td>Nguyễn Minh Hoàng</td>
+							<td>Quảng Nghiệp - Tứ Kì</td>
+							<td>093764524</td>
+							<td>
+								youngbuffalo@gmail.com
+							</td>
+							<td>Trưởng bếp</td>
+							<td>Full-time</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>3</td>
+							<td>NV003</td>
+							<td>Trần Thanh Hương</td>
+							<td>Thống Nhất - Gia Lộc</td>
+							<td>0967352644</td>
+							<td>
+								congchuanho834@gmail.com
+							</td>
+							<td>Phụ bếp</td>
+							<td>Full-time</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>4</td>
+							<td>NV004</td>
+							<td>Phạm Quang Đức</td>
+							<td>Quảng Nghiệp - Tứ Kì</td>
+							<td>0967352644</td>
+							<td>
+								ducpro2k@gmail.com
+							</td>
+							<td>Phụ bếp</td>
+							<td>Full-time</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>5</td>
+							<td>NV005</td>
+							<td>Đàm Văn Long</td>
+							<td>Thạch Khôi - Hải Dương</td>
+							<td>0977664527</td>
+							<td>
+								longdam0609@gmail.com
+							</td>
+							<td>Phụ bếp</td>
+							<td>Full-time</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>6</td>
+							<td>NV006</td>
+							<td>Bùi Ngọc Anh</td>
+							<td>Gia Khánh - Gia Lộc</td>
+							<td>0997463521</td>
+							<td>
+								cugung25042000@gmail.com
+							</td>
+							<td>Tiếp Tân</td>
+							<td>Part-time</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr >
+							<td>7</td>
+							<td>NV007</td>
+							<td>Bùi Thu Phương</td>
+							<td>Thị trấn - Gia Lộc</td>
+							<td>0987746543</td>
+							<td>
+								buiphuong123@gmail.com
+							</td>
+							<td>Tiếp tân</td>
+							<td>Part-time</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="inserted" id="insert">
+			<h3>Thêm nhân viên</h3>
+			<table  cellspacing="0" cellpadding="10">
+				<tr>
+					<td>Mã nhân viên:</td>
+					<td>
+						<input type="text" name="">
+					</td>
+				</tr>
+				<tr>
+					<td>Tên nhân viên:</td>
+					<td><input type="text" name=""></td>
+				</tr>
+				<tr>
+					<td>Địa chỉ:</td>
+					<td><input type="text" name=""></td>
+				</tr>
+				<tr>
+					<td>Số điện thoại:</td>
+					<td><input type="text" name=""></td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td><input type="text" name=""></td>
+				</tr>
+				<tr>
+					<td>Vị trí:</td>
+					<td><input type="text" name=""></td>
+				</tr>
+				<tr>
+					<td>Thời gian làm việc:</td>
+					<td><input type="text" name=""></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<button>Thêm loại</button>
+						<button>Reset</button>
+						<button onclick="back()">Quay lại</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function insert() {
+			document.getElementById('list').style.display='none';
+			document.getElementById('insert').style.display='block';
+			document.getElementById('btnInsert').style.opacity='0.3';
+		}
+		function back(){
+			document.getElementById('list').style.display='block';
+			document.getElementById('insert').style.display='none';
+			document.getElementById('btnInsert').style.opacity='1';
+		}
+	</script>
+</body>
+</html>

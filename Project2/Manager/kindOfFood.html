@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kind of Food</title>
+	<link rel="stylesheet" type="text/css" href="Css/manager.css">
+	<link rel="stylesheet" type="text/css" href="Css/kindofFood.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		.overlay{
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	right: 0%;
+	bottom: 0%;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+}
+
+.fom_xoa{
+	position: fixed;
+	background-color: #fff;
+	top: 30%;
+	left: 30%;
+	right: 30%;
+	bottom: 30%;
+	border-radius: 30px;
+	display: none;
+}
+	</style>
+</head>
+<body>
+	<header>
+		<span>MocaFastfood</span>
+		<ul>
+			<li>
+				<a href="../website.html"><i class="fa fa-share" aria-hidden="true"></i>Quay lại trang chủ</a>
+			</li>
+			<li>
+				<a href="#">Admin<i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+			</li>
+		</ul>
+	</header>
+	<div id="manage-menu">
+		<div class="title-menu">
+			<i class="fa fa-bars" aria-hidden="true"></i>
+			<span>Danh mục quản trị</span>
+		</div>
+		<div class="manage-menu-items">
+			<span>&nbsp;&nbsp;&nbsp;Quản trị sản phẩm</span>
+			<a href="kindOfFood.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loại món ăn</a>
+			<a href="manage.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Món ăn</a>
+			<a href="order.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Đơn hàng</a>	
+			<a href="supplier.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhà cung cấp</a>		
+			
+			<a href="service.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dịch vụ</a>
+			
+			<span>&nbsp;&nbsp;&nbsp;<i class="fa fa-user-o" aria-hidden="true"></i>&nbsp;Quản trị người dùng</span>
+			<a href="Staff.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nhân viên</a>
+			<a href="user.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Khách hàng</a>
+		</div>
+	</div>
+	<div id="manage-content">
+		<div class="title-manage">
+			<h2>Quản lí loại món ăn</h2>
+			<button id="btnInsert" onclick="insert()">Thêm loại món ăn</button>
+			<form  method="" action="post">
+				<input type="text" name="search" placeholder="search">
+				<button ><i style="color: white;" class="fa fa-search fa-1x" aria-hidden="true" ></i></button>
+			</form>
+		</div>
+		<div class="manage-table-content" id="list">
+			<div style="padding-left: 280px; height: 500px;" class="table" >
+				<table  border="1" cellpadding="0" cellspacing="0">
+					<caption style="font-size: 20px;color: #A2A2A2">--Danh sách loại món ăn--</caption>
+					<thead >
+						<tr style="height: 30px">
+							<th width="30">STT</th>
+							<th width="150">Mã loại </th>
+							<th width="180">Tên loại</th>	
+							<th width="180">Thao tác</th>
+						</tr>
+					</thead>
+					<tbody style="text-align: center;">
+						<tr id="1">
+							<td>1</td>
+							<td>L001</td>
+							<td>Mực nướng</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i onclick="dele('1')" class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr  id="2">
+							<td>2</td>
+							<td>L002</td>
+							<td>Mực nướng</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i onclick="dele('2')" class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+							
+						</tr>
+						<tr  id="3">
+							<td>3</td>
+							<td>L003</td>
+							<td>Nem rán</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i onclick="dele('3')" class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr id="4">
+							<td>4</td>
+							<td>L004</td>
+							<td>Hamberger</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i onclick="dele('4')" class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr id="5">
+							<td>5</td>
+							<td>L005</td>
+							<td>Pizza</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i onclick="dele('5')" class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr id="6">
+							<td>6</td>
+							<td>L006</td>
+							<td>Bánh mì</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i onclick="dele('6')" class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr id="7">
+							<td>7</td>
+							<td>L007</td>
+							<td>Sanwich</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i onclick="dele('7')" class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+						<tr id="8">
+							<td>8</td>
+							<td>L008</td>
+							<td>Xúc xích</td>
+							<td>
+								<button><i class="fa fa-cogs" aria-hidden="true"></i></button>
+								<button><i onclick="dele('8')" class="fa fa-trash" aria-hidden="true"></i></button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="overlay" id="overlay"></div>
+		<div class="fom_xoa" id="fom_xoa">
+			<p>bạn có chắc chắn muốn xóa không?</p>
+			<button onclick="deleted()">Có</button>
+			<button>Không</button>
+		</div>
+		<div class="inserted" id="insert">
+			<h3>Thêm loại món ăn</h3>
+			<table  cellspacing="0" cellpadding="10">
+				<tr>
+					<td>Mã loại món ăn:</td>
+					<td>
+						<input type="text" name="">
+					</td>
+				</tr>
+				<tr>
+					<td>Tên loại món ăn:</td>
+					<td><input type="text" name=""></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<button>Thêm loại</button>
+						<button>Reset</button>
+						<button onclick="back()">Quay lại</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function insert() {
+			document.getElementById('list').style.display='none';
+			document.getElementById('insert').style.display='block';
+			document.getElementById('btnInsert').style.opacity='0.3';
+		}
+		function back(){
+			document.getElementById('list').style.display='block';
+			document.getElementById('insert').style.display='none';
+			document.getElementById('btnInsert').style.opacity='1';
+		}
+		function dele( stt ){
+			// document.getElementById('overlay').style.display = 'block';
+			// document.getElementById('fom_xoa').style.display='block';
+			// var del=function deleted(){
+			document.getElementById(stt).style.display='none';
+		}
+			
+		// }
+		
+	</script>
+</body>
+</html>

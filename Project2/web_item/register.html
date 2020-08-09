@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Register</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../Css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/register.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header>
+		<div id="logo" class="header_left">
+			<a  href="../website.html">
+				<img src="../Image/Header/logo2.png" >
+			</a>
+		</div>
+		<div id="form_search" class="header_left">
+			<form  method="" action="post">
+				<input type="text" name="search" placeholder="Nhập tên sản phẩm...">
+				<button ><i style="color: white;" class="fa fa-search fa-1x" aria-hidden="true" ></i></button>
+			</form>
+		</div>
+		<div id="i_fastfood" class="header_left">
+			<img src="../Image/Header/fastfood1.png">
+		</div>	
+	</header>
+
+	<!-- ------------------------------------------------NAVIGATION -->
+	<nav>
+		<ul>
+			<li class="taskbar">
+				<a href="../website.html" active title="trang_chu"> Trang chủ</a>
+			</li>
+			<li class="taskbar"> 
+				<a href="#footer" title="gioi_thieu"> Giới thiệu</a>
+			</li>
+			<li class="taskbar">
+				<a href="#footer" title="tu_van"> Tư vấn</a>
+			</li>
+			<li class="taskbar">
+				<a href="#footer" title="lien_he"> Liên hệ</a>
+			</li>
+			<li id="log_in">
+				<ul>
+					<li class="taskbar">
+						<a href="cart.html" title="gio_hang">Giỏ hàng<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+					</li>
+					<li class="taskbar">
+						<a href="register.html" title="dang_ki"> Đăng kí</a>
+					</li>
+					<li class="taskbar">
+						<a href="log_in.html" title="dang_nhap"> Đăng nhập</a>
+					</li>
+				</ul>		
+			</li>	
+		</ul>	
+	</nav>
+	
+	<!---------------------------------------------- Login content -->
+	<div id="regis-container">
+		<div class="regis-overlay"></div>
+		<div class="regis-content">
+			<h1>Đăng kí thành viên MocaFastFood</h1>
+			<div class="regis-content-img">
+				<img src="Image/Register/cheft.jpg">
+			</div>
+			<div class="regis-content-btn">
+				<form method="" name="regis_form" onsubmit="return validateForm()">
+					<input onchange ="checkAcc()" type="text" name="name" placeholder="&nbsp; &nbsp;tên tài khoản"><br>
+					<p id="warn-acc">* Tên tài khoản có độ dài từ 5 --> 34 kí tự và không có kí tự đặc biệt</p>
+					<input onchange="checkPhone()" type="text" name="teleNumber" placeholder="&nbsp; &nbsp;số điện thoại">
+					<p id="warn-mobile">* Số điện thoại gồm 10 chữ số</p>
+					<input onchange="checkEmail()" type="text" name="email" placeholder="&nbsp; &nbsp;email(usename@mail.com)">
+					<p id="warn-email">* Email có dạng usename@mail.com</p>
+					<input onchange="checkPwd()" type="password" name="password" placeholder="&nbsp; &nbsp;mật khẩu">
+					<p id="warn-pwd">* Mật khẩu có ít nhất 6 kí tự</p>
+					<input onchange="checkCfpwd()" type="password" name="cfpassword" placeholder="&nbsp; &nbsp;nhập lại mật khẩu">
+					<p id="warn-cfpwd">* Mật khẩu không trùng khớp</p>
+					<button ><!-- <a style="text-decoration: none; color: white" href="log_in.html">Đăng kí </a> --> Đăng kí</button>			
+					<p style="color: #FF402B">---Đăng kí nhanh hơn với mạng xã hội của bạn---</p>
+					<a href="#">
+						<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+					</a>
+					<a href="#">
+						<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+					</a>
+				</form>
+			</div>
+		</div>
+	</div>
+	<footer >
+		<div id="follow">
+			<span>Follow us </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;
+			<a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;
+			<a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+		</div>
+		<section id="info_Moca">
+			<h4>CỬA HÀNG MOCA FASTFOOD</h4>
+			<ul>
+				<li>Địa chỉ: khu Đồng Mơ - thị trấn Gia Lộc - huyện Gia Lộc- tỉnh Hải Dương</li>
+				<li>Chủ quán: Trương Tú Oanh</li>	
+				<li>Đầu bếp: Nguyễn Minh Hoàng</li>
+				<li>Đảm bảo an toàn thực phẩm vệ sinh sạch sẽ</li>
+			</ul>
+		</section>
+		<section id="sp_Customer">	
+			<h4>HỖ TRỢ KHÁCH HÀNG</h4>
+			<ul>
+				<li>
+					<a href="#">Hỗ trợ giao hàng</a>
+				</li>
+				<li>
+					<a href="#">Thông tin chuyền khoản</a>
+				</li>
+				<li>
+					<a href="#">Tin cửa hàng</a>
+				</li>
+				<li>
+					<a href="#">Khuyến mãi</a>
+				</li>
+				<li>
+					<a href="#">Câu hỏi thường gặp</a>
+				</li>
+			</ul>		
+		</section>
+		<section id="contact">
+			<h4>LIÊN HỆ</h4>
+			<ul>
+				<li>
+					<i class="fa fa-phone fa-2x" aria-hidden="true"></i>&nbsp;
+					<i>0392243668</i>
+				</li>
+				<li>
+					<i  class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>&nbsp;
+					<i> MocaFastFood fanpage</i><br>
+				</li>
+				<li>
+					<i  class="fa fa-instagram fa-2x" aria-hidden="true"></i>&nbsp;
+					<i> MocaFastFood_gl</i><br>
+				</li>
+				<li>
+					<i  class="fa fa-google fa-2x" aria-hidden="true"></i>&nbsp;
+					<i> mocafastfoodgl@gmail.com</i><br>
+				</li>
+			</ul>
+		</section>	
+	</footer>
+
+
+	<script type="text/javascript" src="Js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MocaFastFood for everyone</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="Css/style.css">
+	<link rel="stylesheet" type="text/css" href="Css/web_media.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<!------------------------------------------HEADER-->
+	<header>
+		<div id="logo" class="header_left">
+			<a  href="website.html">
+				<img src="Image/Header/logo2.png" >
+			</a>
+		</div>
+		<div id="form_search" class="header_left">
+			<form  method="" action="post">
+				<input type="text" name="search" placeholder="Nhập tên sản phẩm...">
+				<button ><i style="color: white;" class="fa fa-search fa-1x" aria-hidden="true" ></i></button>
+			</form>
+		</div>
+		<div id="i_fastfood" class="header_left">
+			<img src="Image/Header/fastfood1.png">
+		</div>
+
+
+		<!---------------------------------------- mobile's header -->
+		
+		<div id="header-icon-cart">
+			<i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 20px;color:#D0D0D0;"></i>
+		</div>
+		<label for="nav-mobile-input" id="header-icon-bars">
+			<i class="fa fa-bars " aria-hidden="true" style="font-size: 22px; color:#D0D0D0;"></i>
+		</label>	
+		<input type="checkbox" name="" style="float: left; display: none;" class="nav-input" id="nav-mobile-input">
+		<label for="nav-mobile-input" class="nav__overlay"></label>
+		<div  id="nav-mobile">	
+			<label for="nav-mobile-input" id="close-nav-mobile-icon">
+				<i class="fa fa-window-close fa-2x" aria-hidden="true"></i>
+			</label>	
+			<div class="nav-item">
+				<div class="nav-item-title">
+					<span>&nbsp; <i class="fa fa-bars" aria-hidden="true"></i>&nbsp;Danh mục</span>
+				</div>
+				<a href="#" class="nav-mobile-item">
+					&nbsp; &nbsp;<i class="fa fa-home" aria-hidden="true"></i>&nbsp;Trang chủ
+				</a>
+				<a href="#" class="nav-mobile-item">
+					&nbsp;&nbsp; <i class="fa fa-shirtsinbulk" aria-hidden="true"></i>&nbsp; Giới thiệu
+				</a>
+				<a href="#" class="nav-mobile-item">
+					&nbsp; &nbsp;<i class="fa fa-users" aria-hidden="true"></i>&nbsp;Tư vấn
+				</a>	
+				<a href="#" class="nav-mobile-item" style="font-size: 20px">
+					&nbsp;&nbsp;&nbsp;<i style="font-size: 26px" class="fa fa-phone" aria-hidden="true"></i>&nbsp;Liên hệ
+				</a>	
+				<a href="#" class="nav-mobile-item">
+					&nbsp;&nbsp;&nbsp;<i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;Đăng kí
+				</a>
+				<a href="#" class="nav-mobile-item">
+					&nbsp;&nbsp;&nbsp;<i class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;Đăng nhập
+				</a>	
+			</div>					
+		</div>
+
+	</header>
+
+	<!-- ------------------------------------------------NAVIGATION -->
+	
+	<nav>
+		<ul>
+			<li class="taskbar">
+				<a href="website.html" active > Trang chủ</a>
+			</li>
+			<li class="taskbar"> 
+				<a href="#footer" > Giới thiệu</a>
+			</li>
+			<li class="taskbar">
+				<a href="#footer" > Tư vấn</a>
+			</li>
+			<li class="taskbar">
+				<a href="#footer" > Liên hệ</a>
+			</li>
+			<li id="log_in">
+				<ul>
+					<li class="taskbar">
+						<a href="web_item/cart.html" >Giỏ hàng<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+					</li>
+					<li class="taskbar">
+						<a href="web_item/register.html" > Đăng kí</a>
+					</li>
+					<li class="taskbar">
+						<a href="web_item/log_in.html" > Đăng nhập</a>
+					</li>
+				</ul>		
+			</li>	
+		</ul>
+	</nav>
+
+	<!-- --------------------------------------------MENU -->
+
+	<div id="content" >
+		<div class="event">
+			<div id="event-title">
+				&nbsp; <i class="fa fa-bolt fa-2x" aria-hidden="true" style="color:#FF402B "></i>
+				<span>Săn deal hot với MocaFastFood</span>
+			</div>
+			<div id="event-video">
+				<a href="#">
+					<video controls autoplay="true" loop>c<source src="Image/Event/event1.mp4" type="video/mp4">
+					</video>
+				</a>
+			</div>
+			<div id="event-img">
+				<div class="event-img-item1">
+						<a href="#"><img src="Image/Event/1.png"></a>
+				</div>
+				<div id="event-img-tablet">
+						<a href="#"><img src="Image/Event/11.jpg"></a>
+				</div>
+				<div class="event-img-item2">
+						<a href="#"><img src="Image/Event/2.PNG"></a>
+				</div>
+				
+			</div>
+		</div>
+		<div class="category">
+			<div id="category-tittle">
+				&nbsp; <i class="fa fa-bars fa-1x" aria-hidden="true" style="color:#FF402B "></i>
+				<span style="font-weight: bold;">DANH MỤC</span>
+			</div>
+			<div id="category-container">
+				<div class="category-item">
+					<a href="web_item/menu.html">
+						<img src="Image/Category/1.jpg">
+					</a>
+					<a href="web_item/menu.html">Gà rán</a>
+				</div>
+				<div class="category-item">
+					<a href="#">
+						<img src="Image/Category/2.jpg">
+					</a>
+					<a href="#">Mực nướng</a>
+				</div>
+
+				<div class="category-item" id="none-mobile">
+					<a href="#">
+						<img src="Image/Category/3.jpg">
+					</a>
+					<a href="#">Nem rán</a>
+				</div>		
+				<div class="category-item">
+					<a href="#">
+						<img src="Image/Category/4.jpg">
+					</a>
+					<a href="#">Hamberger</a>
+				</div>		
+				<div class="category-item">
+					<a href="#">
+						<img src="Image/Category/5.jpg">
+					</a>
+					<a href="#">Pizza</a>
+				</div>		
+				<div class="category-item"  id="none-mobile">
+					<a href="#">
+						<img src="Image/Category/6.jpg">
+					</a>
+					<a href="#">Khoai tây chiên</a>
+				</div>		
+				<div class="category-item"  id="none-mobile">
+					<a href="#">
+						<img src="Image/Category/7.jpg">
+					</a>
+					<a href="#">Bánh mì</a>
+				</div>		
+				<div class="category-item"  id="none-mobile">
+					<a href="#">
+						<img src="Image/Category/8.jpg">
+					</a>
+					<a href="#">Sanwich</a>
+				</div>		
+				<div class="category-item" id="none-tablet">
+					<a href="#">
+						<img src="Image/Category/9.jpg">
+					</a>
+					<a href="#">Xúc xích</a>
+				</div>		
+				<div class="category-item" id="none-tablet">
+					<a href="#">
+						<img src="Image/Category/10.png">
+					</a>
+					<a href="#">Bia</a>
+				</div>		
+				<div class="category-item" id="none-tablet">
+					<a href="#">
+						<img src="Image/Category/11.png">
+					</a>
+					<a href="#">Nước ngọt</a>
+				</div>		
+				<div class="category-item"id="none-tablet">
+					<a href="#">
+						<img src="Image/Category/12.png">
+					</a>
+					<a href="#">Cocktai</a>
+				</div>		
+				<div class="category-item"id="none-tablet">
+					<a href="#">
+						<img src="Image/Category/13.jpg">
+					</a>
+					<a href="#">Trà chanh</a>
+				</div>		
+				<div class="category-item"id="none-tablet">
+					<a href="#">
+						<img src="Image/Category/14.jpg">
+					</a>
+					<a href="#">Soda</a>
+				</div>
+			</div>
+		</div>
+		<div class="product">
+			<div id="pro-anchor">
+				&nbsp; <i class="fa fa-anchor" aria-hidden="true" style="color:#FF402B "></i>
+				<span style="font-weight: bold;">GỢI Ý HÔM NAY</span>
+			</div>
+			<div id="latest">
+				<div class="product-title">
+				 	<div><p>Mới nhất</p></div>
+				</div>
+				<div class="product-container">
+				 	<div class="product-item">
+						<a href="web_item/doan1.html"><img src="Image/Lastest/m1.jpg"></a>
+						<a href="web_item/doan1.html"><p>Gà rán ốc quế</p></a>
+						<p ><u>đ</u>59.000</p>
+						<a href="web_item/doan1.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="web_item/doan1.html"><img src="Image/Lastest/m2.jpg"></a>
+						<a href="web_item/doan1.html"><p>Hamberger bò</p></a>
+						<p ><u >đ</u>42.000</p>
+						<a href="web_item/doan1.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="web_item/doan1.html"><img src="Image/Lastest/m3.jpg"></a>
+						<a href="web_item/doan1.html"><p>Tôm gỏi</p></a>
+						<p ><u >đ</u>89.000</p>
+						<a href="web_item/doan1.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="web_item/doan1.html"><img src="Image/Lastest/m4.jpg"></a>
+						<a href="web_item/doan1.html"><p>Sanwich salad</p></a>
+						<p ><u >đ</u>30.000</p>
+						<a href="web_item/doan1.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="web_item/doan1.html"><img src="Image/Lastest/m5.jpg"></a>
+						<a href="web_item/doan1.html"><p>Sanwich nhân thịt</p></a>
+						<p ><u >đ</u>89.000</p>
+						<a href="web_item/doan1.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="web_item/doan1.html"><img src="Image/Lastest/m6.jpg"></a>
+						<a href="web_item/doan1.html"><p>Mực trứng nướng</p></a>
+						<p ><u >đ</u>99.000</p>
+						<a href="web_item/doan1.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="web_item/doan1.html"><img src="Image/Lastest/m7.jpg"></a>
+						<a href="web_item/doan1.html"><p>Pizza thơm ngậy</p></a>
+						<p ><u >đ</u>78.000</p>
+						<a href="web_item/doan1.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="web_item/doan1.html"><img src="Image/Lastest/m8.jpg"></a>
+						<a href="web_item/doan1.html"><p>Nem chua rán giòn</p></a>
+						<p ><u >đ</u>55.000</p>
+						<a href="web_item/doan1.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+				 </div>	
+			</div>
+			<div id="sales">
+				<div class="product-title">
+				 	<div><p>Khuyến mãi</p></div>
+				</div>
+				<div class="product-container">
+				 	<div class="product-item">
+						<a href="./web_item/doan.html"><img src="Image/Discount/b1.jpg"></a>
+						<a href="./web_item/doan.html"><p>Sanwich 3 tầng</p></a>
+						<p ><u >đ</u>43.000</p>
+						<strike><u>đ</u>86.000</strike>
+						<i>-50&#37;</i><br>
+						<a href="#" href="./web_item/doan.html"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="./web_item/doan.html"><img src="Image/Slide_food/s3.jpg"></a>
+						<a href="web_item/doan.html"><p>Mực nướng tương</p></a>
+						<p ><u >đ</u>47.000</p>
+						<strike><u>đ</u>99.000</strike>
+						<i>-52&#37;</i><br>
+						<a href="./web_item/doan.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="./web_item/doan.html"><img src="Image/Discount/b3.jpg"></a>
+						<a href="./web_item/doan.html"><p>Hamberger + 1 Coca</p></a>
+						<p ><u>đ</u>49.000</p>
+						<i>giá không đổi</i><br>
+						<a href="./web_item/doan.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="./web_item/doan.html"><img src="web_item/Image/Ga_ran/g2.jpg"></a>
+						<a href="./web_item/doan.html"><p>Cánh gà chiên</p></a>
+						<p ><u >đ</u>88.000</p>
+						<strike><u>đ</u>120.000</strike>
+						<i>-36&#37;</i><br>
+						<a href="./web_item/doan.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+				</div>
+			</div>
+			<div id="bestseller">
+				<div class="product-title">
+				 	<div><p>Bán chạy</p></div>
+				 </div>
+				<div class="product-container">
+				 	<div class="product-item">
+						<a href="web_item/doan2.html"><img src="Image/Bestseller/k1.jpg"></a>
+						<a href="web_item/doan2.html"><p>Nem rán</p></a>
+						<p ><u >đ</u>25.000</p>
+						<a href="web_item/doan2.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="#"><img src="Image/Bestseller/k2.jpg"></a>
+						<a href="#"><p>Mực chiên</p></a>
+						<p ><u>đ</u>44.000</p>
+						<a href="#" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="web_item/doan2.html"><img src="Image/Bestseller/k3.jpg"></a>
+						<a href="web_item/doan2.html"><p>Xôi gà rán</p></a>
+						<p><u>đ</u>69.000</p>
+						<a href="web_item/doan2.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="web_item/doan2.html"><img src="Image/Bestseller/k4.jpg"></a>
+						<a href="web_item/doan2.html"><p>Nem chua rán</p></a>
+						<p><u>đ</u>29.000</p>
+						<a href="web_item/doan2.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="web_item/doan2.html"><img src="Image/Bestseller/k5.jpg"></a>
+						<a href="web_item/doan2.html"><p>Tôm chiên ròn</p></a>
+						<p ><u >đ</u>33.000</p>
+						<a href="web_item/doan2.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="web_item/doan2.html"><img src="Image/Bestseller/k6.jpg"></a>
+						<a href="web_item/doan2.html"><p>Pizza kem bơ</p></a>
+						<p><u>đ</u>66.000</p>
+						<a href="web_item/doan2.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="web_item/doan2.html"><img src="web_item/Image/Ga_ran/g5.jpg"></a>
+						<a href="web_item/doan2.html"><p>Xôi gà rán</p></a>
+						<p ><u >đ</u>59.000</p>
+						<a href="web_item/doan2.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+					<div class="product-item">
+						<a href="web_item/doan2.html"><img src="web_item/Image/Ga_ran/g6.jpg"></a>
+						<a href="web_item/doan2.html"><p>Cánh gà chiên xù</p></a>
+						<p ><u >đ</u>84.000</p>
+						<a href="web_item/doan2.html" class="detail"><i>&raquo;Chi tiết</i></a>
+					</div>
+				 </div>
+			</div>
+		</div>	
+		<hr>		
+	</div> 
+
+
+	<!-- button interfact
+	<div id ="scroll_top">
+		<a href="#"><i class="fa fa-angle-double-up fa-3x" aria-hidden="true"></i></a>
+	</div>
+	<div id ="btn_call">
+		<i class="fa fa-phone fa-3x" aria-hidden="true" title="call"></i>
+	</div>
+	<div id ="btn_mess">
+		<i class="fa fa-weixin fa-3x" aria-hidden="true" title="messenger"></i>
+	</div> -->
+	<!------------------------------------------ footerr -->
+	<footer >
+		<div id="follow">
+			<span>Follow us </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;
+			<a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;
+			<a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+		</div>
+		<section id="info_Moca">
+			<h4>CỬA HÀNG MOCA FASTFOOD</h4>
+			<ul>
+				<li>Địa chỉ: khu Đồng Mơ - thị trấn Gia Lộc - huyện Gia Lộc- tỉnh Hải Dương</li>
+				<li>Chủ quán: Trương Tú Oanh</li>	
+				<li>Đầu bếp: Nguyễn Minh Hoàng</li>
+				<li>Đảm bảo an toàn thực phẩm vệ sinh sạch sẽ</li>
+			</ul>
+		</section>
+		<section id="sp_Customer">	
+			<h4>HỖ TRỢ KHÁCH HÀNG</h4>
+			<ul>
+				<li>
+					<a href="#">Hỗ trợ giao hàng</a>
+				</li>
+				<li>
+					<a href="#">Thông tin chuyền khoản</a>
+				</li>
+				<li>
+					<a href="#">Tin cửa hàng</a>
+				</li>
+				<li>
+					<a href="#">Khuyến mãi</a>
+				</li>
+				<li>
+					<a href="#">Câu hỏi thường gặp</a>
+				</li>
+			</ul>		
+		</section>
+		<section id="contact">
+			<h4>LIÊN HỆ</h4>
+			<ul>
+				<li>
+					<i class="fa fa-phone fa-2x" aria-hidden="true"></i>&nbsp;
+					<i>0392243668</i>
+				</li>
+				<li>
+					<i  class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>&nbsp;
+					<i> MocaFastFood fanpage</i><br>
+				</li>
+				<li>
+					<i  class="fa fa-instagram fa-2x" aria-hidden="true"></i>&nbsp;
+					<i> MocaFastFood_gl</i><br>
+				</li>
+				<li>
+					<i  class="fa fa-google fa-2x" aria-hidden="true"></i>&nbsp;
+					<i> mocafastfoodgl@gmail.com</i><br>
+				</li>
+			</ul>
+		</section>	
+	</footer>
+</body>
+</html>

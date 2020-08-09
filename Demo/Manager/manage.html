@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MocaFastFood Manager</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="G:/Front-end/Bootstrap/bootstrap-4.4.1-dist/css/bootstrap.css"> -->
+	<link rel="stylesheet" type="text/css" href="../Css/style.css">
+	<link rel="stylesheet" type="text/css" href="Css/manager.css">
+	<link rel="stylesheet" type="text/css" href="G:/Front-end/Font Awesome/font-awesome-4.7.0/css/font-awesome.min.css">	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../Js/myscript.js"></script>
+</head>
+<body>
+	<!------------------------------------------HEADER-->
+	
+	<header>
+		<div id="logo" class="header_left">
+			<a  href="website.html">
+				<img src="../Image/Header/logo2.png" style="width: 250px;height: 100px;" >
+			</a>
+		</div>
+		<div id="form_search" class="header_left">
+			<form  method="" action="post">
+				<input type="text" name="search" placeholder="Nhập tên sản phẩm...">
+				<button></button>
+			</form>
+		</div>
+		<div id="i_fastfood" class="header_left">
+			<img src="../Image/Header/fastfood1.png" style="width: 280px;height: 100px;">
+		</div>		
+	</header>
+
+	<!-- ------------------------------------------------NAVIGATION -->
+	
+	<nav>
+		<ul>
+			<li class="taskbar">
+				<a href="../website.html" active title="trang_chu"> Trang chủ</a>
+			</li>
+			<li class="taskbar"> 
+				<a href="#" title="gioi_thieu"> Giới thiệu</a>
+			</li>
+			<li class="taskbar">
+				<a href="#" title="tu_van"> Tư vấn</a>
+			</li>
+			<li class="taskbar">
+				<a href="#" title="lien_he"> Liên hệ</a>
+			</li>
+			<li id="user">
+				<ul>
+					<li class="taskbar">
+						<a href="#" title="gio_hang">Giỏ hàng<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+					</li>
+					<li class="i_user">
+						<a href="web_item/log_in.html" title="Manager">Manager&nbsp;<i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i></a>
+					</li>
+				</ul>		
+			</li>	
+		</ul>	
+	</nav>
+	<dir id="nam" class="container-fluid">
+		<dir class="row">
+			<dir class="col-sm-3" id="menu">
+				<p>Danh mục quản lí</p>
+				<div class="list-group">
+				    <a href="#" class="list-group-item ">Đơn hàng chưa xác thực</a>
+				    <a href="#" class="list-group-item ">Đơn hàng đã xác thực</a>
+				    <a href="#" class="list-group-item">Đơn hàng đã giao</a>	
+				    <a href="#" class="list-group-item">Loại món ăn</a>
+				    <a href="#" class="list-group-item">Món ăn</a>
+				    <a href="#" class="list-group-item">Nhà cung cấp</a>
+				    <a href="#" class="list-group-item">Tin tức</a>	
+			    </div>
+			</dir>
+			<dir id="nd_phai" class="col-sm-9">
+				<div class="title_item">
+				 	<div id="tit_box"><p>Đơn hàng chưa xác thực</p></div>
+				 </div>
+				<dir class="order">
+					
+				</dir>
+			</dir>
+		</dir>
+	</dir>
+</body>
+</html>

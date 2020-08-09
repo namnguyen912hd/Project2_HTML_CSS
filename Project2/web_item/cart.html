@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Giỏ hàng</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../Css/style.css">
+	<link rel="stylesheet" type="text/css" href="Css/cart.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		.overlay{
+			position: fixed;
+			top: 0%;
+			left: 0%;
+			right: 0%;
+			bottom: 0%;
+			background-color: rgba(0,0,0,0.9);
+			display: none;
+		}
+		.Confirm1{
+			z-index: 999;
+			position: fixed;
+		    top: 10%;
+		    left: 20%;
+		    right: 20%;
+		    bottom: 15%;
+		    /*width: 800px;*/
+		    background-color: #F2EFEF;
+		    padding: 15px;
+		    border-radius: 8px;
+		    display:none;
+		}
+		#btn{
+			width: 100%;
+			text-align: center;
+			text-indent: center;
+		}
+		#btn button {
+			width: 150px;
+			height: 40px;
+			background-color: #35A32D;
+			color: white;
+			font-size: 17px;
+			border: 1px solid #282CDC;
+
+		}
+
+	</style>
+</head>
+<body>
+	<!------------------------------------------HEADER-->
+	<header>
+		<div id="logo" class="header_left">
+			<a  href="../website.html">
+				<img src="../Image/Header/logo2.png" >
+			</a>
+		</div>
+		<div id="form_search" class="header_left">
+			<form  method="" action="post">
+				<input type="text" name="search" placeholder="Nhập tên sản phẩm...">
+				<button ><i style="color: white;" class="fa fa-search fa-1x" aria-hidden="true" ></i></button>
+			</form>
+		</div>
+		<div id="i_fastfood" class="header_left">
+			<img src="../Image/Header/fastfood1.png">
+		</div>	
+	</header>
+
+	<!-- ------------------------------------------------NAVIGATION -->
+	
+	<nav>
+		<ul>
+			<li class="taskbar">
+				<a href="../website.html" active > Trang chủ</a>
+			</li>
+			<li class="taskbar"> 
+				<a href="#" > Giới thiệu</a>
+			</li>
+			<li class="taskbar">
+				<a href="#" > Tư vấn</a>
+			</li>
+			<li class="taskbar">
+				<a href="#" > Liên hệ</a>
+			</li>
+			<li id="user">
+				<ul>
+					<li class="taskbar">
+						<a href="#" title="gio_hang">Giỏ hàng<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+					</li>
+					<li class="i_user">
+						<a href="web_item/log_in.html" >User&nbsp;<i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>
+
+
+						</a>
+						<ul>
+							<li><a href="">Aminn</a></li>
+							<li>gdfgdf</li>
+							<li>gdfdg</li>
+							<li>gdgdf</li>
+						</ul>
+					</li>
+				</ul>		
+			</li>	
+		</ul>	
+	</nav>
+
+<!-- -------------------------------------	content cart -->
+	<div id="content_cart">
+		
+		<div id="products">
+			<div id="select_all">
+				<input oninput ="check()" id="checkall"  type="checkbox" name="total" checked="true">
+				<span >Chọn tất cả</span>
+				<span style="padding-left: 312px;">Đơn giá</span>
+				<span style="padding-left: 90px">Số lượng</span>
+				<span style="padding-left: 93px">Số tiền</span>
+			</div>
+
+			<div class="product" id="p1">
+				<div class="select">
+					<input id="check1" oninput ="checkProduct('check1','add1','sub1','totalmoney1')" type="checkbox" name="select" checked="true">
+				</div>
+				<div class="img_product">
+					<a href="doan.html"><img src="Image/Sell/s3.jpg"></a>
+				</div>
+				<div class="info_product">
+					<br>
+					<a href="doan.html">Mực nướng tương hột</a><br><br>
+					<span>Phân loại:<a href="#">Mực nướng</a> </span>
+					<br><br>
+					<i class="fa fa-heart-o" aria-hidden="true"></i>
+					<i onclick="deleted('p1','totalmoney1')" class="fa fa-trash-o" aria-hidden="true"></i>
+				</div>
+				<div class="price_product">
+					<br>
+					&nbsp;&nbsp;&nbsp;<u style="color:#FF402B;">đ</u><span id="unitPrice1">47.000</span><br>
+					<strike><u>đ</u>99.000</strike>
+					<i>-52&#37;</i>
+				</div>
+				<div class="count_product">
+					<br>
+					<div id="sub"><button onclick="sub('num1','sub1','unitPrice1','totalmoney1')" id="sub1" disabled="true">&ndash;</button></div>
+					<div id="number"><input id="num1" type="text" value="1" readonly=""></div>
+					<div id="addi"><button onclick="add('num1','sub1','unitPrice1','totalmoney1')" id="add1"> +</button></div>
+				</div>
+				<div id="total-money">
+					<u >đ</u><span id="totalmoney1" >47.000</span>
+				</div>
+			</div>
+
+
+
+			<div class="product" id="p2">
+				<div class="select">
+					<input id="check2" oninput ="checkProduct('check2','add2','sub2','totalmoney2')" type="checkbox" name="select"  checked="true">
+				</div>
+				<div class="img_product">
+					<a href="doan.html"><img src="../Image/Bestseller/k1.jpg"></a>
+				</div>
+				<div class="info_product">
+					<br>
+					<a href="doan.html">Nem rán cổ truyền</a><br><br>
+					<span>Phân loại:<a href="#">Nem rán</a> </span>
+					<br><br>
+					<i class="fa fa-heart-o" aria-hidden="true"></i>
+					<i onclick="deleted('p2','totalmoney2')" class="fa fa-trash-o" aria-hidden="true"></i>
+				</div>
+				<div class="price_product">
+					<br>
+					&nbsp;&nbsp;&nbsp;<u style="color:#FF402B;">đ</u><span id="unitPrice2">29.000</span><br>
+					<strike><u>đ</u>50.000</strike>
+					<i>-41&#37;</i>
+				</div>
+				<div class="count_product">
+					<br>
+					<div id="sub"><button onclick="sub('num2','sub2','unitPrice2','totalmoney2')" id="sub2"  disabled="true">&ndash;</button></div>
+					<div id="number"><input id="num2" type="text" value="1" readonly=""></div>
+					<div id="addi"><button onclick="add('num2','sub2','unitPrice2','totalmoney2')" id="add2">+</button></div>
+				</div>
+				<div id="total-money">
+					<u >đ</u><span id="totalmoney2">29.000</span>
+				</div>
+				
+			</div>
+
+			<div class="product" id="p3">
+				<div class="select">
+					<input id="check3" oninput ="checkProduct('check3','add3','sub3','totalmoney3')" id="check3" type="checkbox" name="select" checked="true">
+				</div>
+				<div class="img_product">
+					<a href="doan.html"><img src="../Image/Bestseller/k2.jpg"></a>
+				</div>
+				<div class="info_product">
+					<br>
+					<a href="doan.html">Mực chiên giòn</a><br><br>
+					<span>Phân loại:<a href="#">Mực nướng</a> </span>
+					<br><br>
+					<i class="fa fa-heart-o" aria-hidden="true"></i>
+					<i onclick="deleted('p3','totalmoney3')"  class="fa fa-trash-o" aria-hidden="true"></i>
+				</div>
+				<div class="price_product">
+					<br>
+					&nbsp;&nbsp;&nbsp;<u style="color:#FF402B;">đ</u><span id="unitPrice3">47.000</span><br>
+					
+				</div>
+				<div class="count_product">
+					<br>
+					<div id="sub"><button onclick="sub('num3','sub3','unitPrice3','totalmoney3')" id="sub3" disabled="true">&ndash;</button></div>
+					<div id="number"><input id="num3" type="text" value="1" readonly=""></div>
+					<div id="addi"><button onclick="add('num3','sub3','unitPrice3','totalmoney3')" id="add3">+</button></div>
+				</div>
+				<div id="total-money">
+					<u >đ</u><span id="totalmoney3">47.000</span>
+				</div>
+			</div>
+
+			<div class="product" id="p4">
+				<div class="select">
+					<input id="check4" oninput ="checkProduct('check4','add4','sub4','totalmoney4')" id="check4" type="checkbox" name="select" checked="true">
+				</div>
+				<div class="img_product">
+					<a href="doan.html"><img src="../Image/Bestseller/k3.jpg"></a>
+				</div>
+				<div class="info_product">
+					<br>
+					<a href="doan.html">Xôi gà rán</a><br><br>
+					<span>Phân loại:<a href="#">Gà rán</a> </span>
+					<br><br>
+					<i class="fa fa-heart-o" aria-hidden="true"></i>
+					<i onclick="deleted('p4','totalmoney4')" class="fa fa-trash-o" aria-hidden="true"></i>
+				</div>
+				<div class="price_product">
+					<br>
+					&nbsp;&nbsp;&nbsp;<u style="color:#FF402B;">đ</u><span id="unitPrice4">80.000</span><br>
+					<strike><u>đ</u>100.000</strike>
+					<i>-20&#37;</i>
+				</div>
+				<div class="count_product">
+					<br>
+					<div id="sub"><button onclick="sub('num4','sub4','unitPrice4','totalmoney4')" id="sub4" disabled="true">&ndash;</button></div>
+					<div id="number"><input id="num4" type="text" value="1" readonly=""></div>
+					<div id="addi"><button onclick="add('num4','sub4','unitPrice4','totalmoney4')" id="add4">+</button></div>
+				</div>
+				<div id="total-money">
+					<u >đ</u><span id="totalmoney4" >80.000</span>
+				</div>
+			</div>
+		</div>
+		<div id="bill">
+			<h3>Thông tin đơn hàng</h3><br>
+			<div id="price_product">
+				Tạm tính:
+				<u style="color:#FF402B;padding-left: 20px">đ</u><span id="tmpBill">203.000</span>
+			</div><br>
+			<div id="price_ship">
+				Phí giao hàng:
+				<u style="color:#FF402B;padding-left: 20px">đ</u><span>17.000</span>
+			</div><br>
+			<div id="discount_bill">
+				<form  method="" action="post">
+					<input type="text" placeholder="&nbsp;&nbsp;&nbsp;Nhập mã giảm giá...">
+					<button>ÁP DỤNG</button>
+				</form>
+			</div><br>
+			<div id="total_price">
+				Tổng:
+				<u style="color:#FF402B;padding-left: 20px">đ</u><span id="totalBill">220.000</span><br>
+				<i>Đã bao gồm phí VAT(nếu có)</i>
+			</div><br>
+			<div id="xacnhan">
+				<button onclick="Xacnhan()" style="width: 100%;height: 45px;background-color: #FF402B;border: 1px solid #FF402B;color: white;font-weight: bold;font-size: 18px;">
+						Xác nhận đơn hàng
+				</button>
+			</div>
+			<div id="c_event">
+				<p><i class="fa fa-bolt" aria-hidden="true"></i>&nbsp;Sự kiện đang diễn ra</p>
+				<a href="#">
+					<img src="../Image/Event/2.png">
+				</a>
+				<a href="#">
+					<img src="../Image/Event/11.jpg">
+				</a>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div id="latest" >
+				 	<div class="title_item">
+				 		<div><p>Có thể bạn thích</p></div>
+				 	</div>
+				 	<div class="product-container" >
+				 		<div class="product-item">
+							<a href="#"><img src="Image/Ga_ran/l1.jpg"></a>
+							<a href="#"><p>Nem rán ròn</p></a>
+							<p ><u >đ</u>28.000</p>
+							<a href="#" class="detail"><i>&raquo;Chi tiết</i></a>
+						</div>
+						<div class="product-item">
+							<a href="#"><img src="Image/Ga_ran/l2.jpg"></a>
+							<a href="#"><p>Mực chiên</p></a>
+							<p ><u >đ</u>55.000</p>
+							<a href="#" class="detail"><i>&raquo;Chi tiết</i></a>
+						</div>
+						<div class="product-item">
+							<a href="#"><img src="Image/Ga_ran/l3.jpg"></a>
+							<a href="#"><p>Hamberger</p></a>
+							<p ><u >đ</u>49.000</p>
+							<a href="#" class="detail"><i>&raquo;Chi tiết</i></a>
+						</div>
+						<div class="product-item">
+							<a href="#"><img src="../Image/Lastest/m1.jpg"></a>
+							<a href="#"><p>Gà rán ốc quế</p></a>
+							<p ><u>đ</u>59.000</p>
+							<a href="#" class="detail"><i>&raquo;Chi tiết</i></a>
+						</div>
+						<div class="product-item">
+							<a href="#"><img src="../Image/Lastest/m2.jpg"></a>
+							<a href="#"><p>Hamberger thịt bò</p></a>
+							<p ><u >đ</u>42.000</p>
+							<a href="#" class="detail"><i>&raquo;Chi tiết</i></a>
+						</div>
+						<div class="product-item">
+							<a href="#"><img src="../Image/Lastest/m3.jpg"></a>
+							<a href="#"><p>Tôm gỏi</p></a>
+							<p ><u >đ</u>89.000</p>
+							<a href="#" class="detail"><i>&raquo;Chi tiết</i></a>
+						</div>
+						<div class="product-item">
+							<a href="#"><img src="../Image/Lastest/m4.jpg"></a>
+							<a href="#"><p>Sanwich salad</p></a>
+							<p ><u >đ</u>30.000</p>
+							<a href="#" class="detail"><i>&raquo;Chi tiết</i></a>
+						</div>
+						<div class="product-item" style="margin-bottom: 50px;">
+							<a href="#"><img src="../Image/Lastest/m5.jpg"></a>
+							<a href="#"><p>Sanwich nhân thịt</p></a>
+							<p ><u >đ</u>89.000</p>
+							<a href="#" class="detail"><i>&raquo;Chi tiết</i></a>
+						</div>
+				 	</div>
+	</div>
+	<div class="Confirm1" id="confirm1" style="font-size: 18px; ">
+		<h1>Xác nhận đơn hàng</h1>
+		<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Họ tên khách hàng: </label><span>Trương Tú Oanh</span><br><br>
+		<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tên tài khoản: </label><span>Orugami</span><br><br>
+		<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SDT: </label><span>0985638749</span><br><br>
+		<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Địa chỉ nhận: </label><input style="width: 350px;height: 30px;font-size: 13px;border: 1px solid #2E4DEB;color:#2C2B2B" type="text" value="Thôn Đại Tỉnh- Hoàng Diệu- Gia Lộc- Hải Dương" id="diachi"><br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="dcMoi" oninput="ktra()"><span style="font-size: 17px;color: #807D7D"> Địa chỉ mới</span><br><br>
+		<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tiền sản phẩm: </label><span><u >đ</u>140.000</span>
+		<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phí ship: </label><span> <u >đ</u>17.000</span><br><br>
+		<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tổng tiền:</label><span><u >đ</u>157.000</span><br><br>
+		<div id="btn">
+			<button onclick="confirm()">Xác nhận</button>
+			<button onclick="huy()">Hủy</button>
+		</div>
+	</div>
+	<div class="overlay" id="overlay"></div>
+	<footer >
+		<div id="follow">
+			<span>Follow us </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;
+			<a href="#"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;
+			<a href="#"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+		</div>
+		<section id="info_Moca">
+			<h4>CỬA HÀNG MOCA FASTFOOD</h4>
+			<ul>
+				<li>Địa chỉ: khu Đồng Mơ - thị trấn Gia Lộc - huyện Gia Lộc- tỉnh Hải Dương</li>
+				<li>Chủ quán: Trương Tú Oanh</li>	
+				<li>Đầu bếp: Nguyễn Minh Hoàng</li>
+				<li>Đảm bảo an toàn thực phẩm vệ sinh sạch sẽ</li>
+			</ul>
+		</section>
+		<section id="sp_Customer">	
+			<h4>HỖ TRỢ KHÁCH HÀNG</h4>
+			<ul>
+				<li>
+					<a href="#">Hỗ trợ giao hàng</a>
+				</li>
+				<li>
+					<a href="#">Thông tin chuyền khoản</a>
+				</li>
+				<li>
+					<a href="#">Tin cửa hàng</a>
+				</li>
+				<li>
+					<a href="#">Khuyến mãi</a>
+				</li>
+				<li>
+					<a href="#">Câu hỏi thường gặp</a>
+				</li>
+			</ul>		
+		</section>
+		<section id="contact">
+			<h4>LIÊN HỆ</h4>
+			<ul>
+				<li>
+					<i class="fa fa-phone fa-2x" aria-hidden="true"></i>&nbsp;
+					<i>0392243668</i>
+				</li>
+				<li>
+					<i  class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>&nbsp;
+					<i> MocaFastFood fanpage</i><br>
+				</li>
+				<li>
+					<i  class="fa fa-instagram fa-2x" aria-hidden="true"></i>&nbsp;
+					<i> MocaFastFood_gl</i><br>
+				</li>
+				<li>
+					<i  class="fa fa-google fa-2x" aria-hidden="true"></i>&nbsp;
+					<i> mocafastfoodgl@gmail.com</i><br>
+				</li>
+			</ul>
+		</section>	
+	</footer>
+<script type="text/javascript" src="Js/cart.js"></script>	
+<script type="text/javascript">
+	function Xacnhan() {
+		document.getElementById('overlay').style.display='block';
+		document.getElementById('confirm1').style.display='block';
+	}
+	function huy(){
+		document.getElementById('overlay').style.display='none';
+		document.getElementById('confirm1').style.display='none';
+	}
+	function ktra(){
+		document.getElementById('diachi').value="";
+	}
+	function confirm(){
+		alert("Đặt hàng thành công !")
+		huy();
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+#login-container{
+	width: 100%;
+	height: 1000px;
+	background-image: url(../Image/Login/bgg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	float: left;
+}
+.login-overlay{
+	float: left;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.6);
+}
+.login-content{
+	position: absolute;
+	top: 4%;
+	left: 25%;
+	right: 25%;
+	border: 0;
+	width: 50%;
+	height: 75%;
+	background-color: rgba(0,0,0,0.7);
+	text-align: center;
+	border-radius: 20px;
+}
+.login-content h1{
+	color: white;
+}
+.login-form{
+	width: 100%;
+	height: 65%;
+}
+.login-form-img{
+	width: 160px;
+	height: 160px;
+	background-image: url(../Image/Login/user.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: 1px solid  #FF402B; 
+	margin: 0 auto;
+	border-radius: 80px;
+}
+.login-form-btn{
+	margin-top: 6%;
+	width: 100%;
+	height: auto;
+}
+.login-form-btn form{
+	position: relative;
+	margin-left: 20%;
+	float: left;
+	width: 60%;
+	height: 100px; 
+	margin-bottom: 20px; 
+}
+.login-form-btn form input{
+	float: left;
+	width: 100%;
+	height:45px;
+	color: white;
+	background-color: rgba(0,0,0,0.5);
+	border: none;
+	margin-top: 2%;
+	border: 1px solid #FF402B;
+	text-align: center;
+
+}
+.login-form-btn form i{
+	margin-top: 0;
+	position: absolute;
+	right: 6px;
+	top: 0px;
+	cursor: pointer;
+	color:#FF402B;
+	margin-top: 15px;	
+}
+.login-detail{
+	width: 60%;
+	height: 15px;
+	margin-left: 20%;
+	float: left;
+}
+.login-save-acc{
+	width: 50%;
+	float: left;
+}
+.login-save-acc input{
+	margin: 0;
+	padding-top: 0;
+	height: 17px;
+	width: 20px;
+	background-color: rgba(0,0,0,0.5);
+	border: 1px solid #FF402B; 
+	float: left;
+}
+.login-save-acc span{
+	float: left;
+	font-size: 15px;
+	color: #FF402B; 
+}
+.login-foget-acc{
+	width: auto;
+	float: right;
+}
+.login-foget-acc a{
+	/*text-decoration: none;*/
+	color: #FF402B; 
+	font-size: 15px;
+}
+.login-btn{
+	float: left;
+	margin-top: 4%;
+	width: 60%;
+	height: 60px;
+	margin-left: 20%;
+	border:1px solid #FF402B; 
+	color: white;
+	font-size: 22px;
+	border-radius: 5px;
+	background-color: #FF402B;
+}
+.login-btn-face{
+	float: left;
+	margin-top: 1%;
+	width: 60%;
+	height: 60px;
+	margin-left: 20%;
+	border:1px solid #2B67FF; 
+	color: white;
+	font-size: 19px;
+	border-radius: 5px;
+	background-color: #2B67FF;
+}
+.login-btn-gg{
+	float: left;
+	margin-top: 1%;
+	width: 60%;
+	height: 60px;
+	margin-left: 20%;
+	border:1px solid #BE1111; 
+	color: white;
+	font-size: 19px;
+	border-radius: 5px;
+	background-color: #BE1111;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+	float: left;
+}
